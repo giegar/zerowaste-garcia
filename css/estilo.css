@@ -1,0 +1,65 @@
+body {
+  background: linear-gradient(to bottom, #d8e579, #6cdb64);
+  background-attachment: fixed;
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 2.5em;
+  margin: 3rem; }
+  body header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    body header .menuPrincipal {
+      width: 100%; }
+      body header .menuPrincipal .menu {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        font-size: 70%; }
+        body header .menuPrincipal .menu .boton {
+          color: #013237;
+          text-decoration: none;
+          margin-left: 1rem;
+          padding: 0.5rem; }
+          body header .menuPrincipal .menu .boton:hover {
+            background-color: #d8e579;
+            border-radius: 3rem; }
+  body .eslogan {
+    font-size: 10rem;
+    line-height: 1em;
+    color: #013237;
+    text-align: left; }
+  body .eventos .eventosTodos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between; }
+    body .eventos .eventosTodos .divEvento {
+      background-color: rgba(216, 229, 121, 0.5);
+      border-radius: 1rem;
+      padding: 2%;
+      margin-top: 2%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+      body .eventos .eventosTodos .divEvento .imagenEvento {
+        width: 18em; }
+      body .eventos .eventosTodos .divEvento .textoEvento {
+        font-size: 70%;
+        text-align: center; }
+  body footer .menuSecundario {
+    margin: 1rem;
+    padding: 0.5rem; }
+    body footer .menuSecundario .listaSecundaria {
+      list-style-type: none; }
+      body footer .menuSecundario .listaSecundaria .boton {
+        color: #013237;
+        text-decoration: none;
+        margin-left: 1rem;
+        padding: 0.5rem; }
+        body footer .menuSecundario .listaSecundaria .boton:hover {
+          background-color: #d8e579;
+          border-radius: 3rem; }
+
+/*VERSION MOBILE*/
