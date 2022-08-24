@@ -1,0 +1,20 @@
+.mainConsejos{
+    .introduccion{
+        font-size: $txt-contenido;
+        @include caja;
+        .txtNegrita{
+            font-weight: bold;
+        }
+    }
+    .apartado{
+        @include caja;
+        .subtitulo{
+            font-size: $txt-titulo;
+            color: $azul-oscuro;
+        }
+        .listaConsejos{
+            font-size: $txt-contenido;
+            list-style-type: none;
+        }
+    }
+}

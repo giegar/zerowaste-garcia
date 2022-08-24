@@ -1,0 +1,46 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .menu{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        font-size: $txt-opciones;
+        .boton{
+            text-decoration: none;
+            margin-left: 1rem;
+            padding: 0.5rem;
+            &:hover{
+                background-color: $amarillo;
+                border-radius: 3rem;
+            }
+        }
+    }
+}    
+footer{
+    .menuSecundario{
+        margin: 1rem;
+        padding: 0.5rem;    
+        .listaSecundaria{
+            list-style-type: none;    
+            .boton{
+                font-size: $txt-opciones;
+                margin-left: 1rem;
+                padding: 0.5rem;
+                &:hover{
+                    background-color: #d8e579;
+                    border-radius: 3rem;    
+                }    
+            }
+        }
+    }
+}    
+aside{
+    .newsletter{
+        font-size: $txt-enfatico;
+    }
+}    
+
+

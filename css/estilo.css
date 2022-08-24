@@ -1,65 +1,367 @@
-body {
-  background: linear-gradient(to bottom, #d8e579, #6cdb64);
-  background-attachment: fixed;
-  font-family: 'Darker Grotesque', sans-serif;
-  font-size: 2.5em;
-  margin: 3rem; }
-  body header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    body header .menuPrincipal {
-      width: 100%; }
-      body header .menuPrincipal .menu {
-        list-style-type: none;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        font-size: 70%; }
-        body header .menuPrincipal .menu .boton {
-          color: #013237;
-          text-decoration: none;
-          margin-left: 1rem;
-          padding: 0.5rem; }
-          body header .menuPrincipal .menu .boton:hover {
-            background-color: #d8e579;
-            border-radius: 3rem; }
-  body .eslogan {
-    font-size: 10rem;
-    line-height: 1em;
-    color: #013237;
-    text-align: left; }
-  body .eventos .eventosTodos {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: space-between; }
-    body .eventos .eventosTodos .divEvento {
-      background-color: rgba(216, 229, 121, 0.5);
-      border-radius: 1rem;
-      padding: 2%;
-      margin-top: 2%;
-      display: flex;
-      flex-direction: row;
-      justify-content: center; }
-      body .eventos .eventosTodos .divEvento .imagenEvento {
-        width: 18em; }
-      body .eventos .eventosTodos .divEvento .textoEvento {
-        font-size: 70%;
-        text-align: center; }
-  body footer .menuSecundario {
-    margin: 1rem;
-    padding: 0.5rem; }
-    body footer .menuSecundario .listaSecundaria {
-      list-style-type: none; }
-      body footer .menuSecundario .listaSecundaria .boton {
-        color: #013237;
-        text-decoration: none;
-        margin-left: 1rem;
-        padding: 0.5rem; }
-        body footer .menuSecundario .listaSecundaria .boton:hover {
-          background-color: #d8e579;
-          border-radius: 3rem; }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .menu {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-size: 1.5em;
+}
+header .menu .boton {
+  text-decoration: none;
+  margin-left: 1rem;
+  padding: 0.5rem;
+}
+header .menu .boton:hover {
+  background-color: #d8e579;
+  border-radius: 3rem;
+}
 
-/*VERSION MOBILE*/
+footer .menuSecundario {
+  margin: 1rem;
+  padding: 0.5rem;
+}
+footer .menuSecundario .listaSecundaria {
+  list-style-type: none;
+}
+footer .menuSecundario .listaSecundaria .boton {
+  font-size: 1.5em;
+  margin-left: 1rem;
+  padding: 0.5rem;
+}
+footer .menuSecundario .listaSecundaria .boton:hover {
+  background-color: #d8e579;
+  border-radius: 3rem;
+}
+
+aside .newsletter {
+  font-size: 2.7em;
+}
+
+body {
+  background: linear-gradient(to bottom, #6cdb64, #92b211);
+  background-attachment: fixed;
+  font-family: "Darker Grotesque", sans-serif;
+  margin: 3rem;
+}
+
+/*INDEX*/
+.eslogan {
+  font-size: 2.7em;
+  line-height: 1em;
+  letter-spacing: 1rem;
+  text-align: left;
+}
+
+main .informacion {
+  font-size: 2em;
+}
+main .apartado {
+  background-color: rgba(216, 229, 121, 0.5);
+  padding: 1.2%;
+  margin-top: 2%;
+  border-radius: 2rem;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.eventos .tituloEventos {
+  font-size: 2.5em;
+}
+.eventos .eventosTodos {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.eventos .eventosTodos .divEvento {
+  background-color: rgba(216, 229, 121, 0.5);
+  border-radius: 1rem;
+  padding: 2%;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.eventos .eventosTodos .divEvento .imagenEvento {
+  width: 18em;
+}
+.eventos .eventosTodos .divEvento .textoEvento {
+  font-size: 2em;
+}
+
+.mainConsejos .introduccion {
+  font-size: 2em;
+  background-color: rgba(216, 229, 121, 0.5);
+  padding: 1.2%;
+  margin-top: 2%;
+  border-radius: 2rem;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.mainConsejos .introduccion .txtNegrita {
+  font-weight: bold;
+}
+.mainConsejos .apartado {
+  background-color: rgba(216, 229, 121, 0.5);
+  padding: 1.2%;
+  margin-top: 2%;
+  border-radius: 2rem;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.mainConsejos .apartado .subtitulo {
+  font-size: 2.5em;
+  color: #013237;
+}
+.mainConsejos .apartado .listaConsejos {
+  font-size: 2em;
+  list-style-type: none;
+}
+
+.mainConsResp .apartado {
+  background-color: rgba(216, 229, 121, 0.5);
+  padding: 1.2%;
+  margin-top: 2%;
+  border-radius: 2rem;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  font-size: 2em;
+}
+.mainConsResp .cajaPreguntas .subtitulo {
+  font-size: 2.5em;
+  color: #013237;
+}
+.mainConsResp .cajaPreguntas .listaPreguntas .pregunta {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  list-style-type: none;
+  background-color: rgba(216, 229, 121, 0.5);
+  margin-top: 1%;
+  border-radius: 2rem;
+}
+.mainConsResp .cajaPreguntas .listaPreguntas .pregunta:hover {
+  background-color: #d8e579;
+}
+
+/** MEDIAQ INDEX**/
+@media screen and (min-width: 1024px) {
+  .grillaIndex {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10em 15em auto 10em;
+    grid-row-gap: 5px;
+    grid-template-areas: "header header header" "frase frase frase" "main main main" "footer aside aside";
+    margin: 2%;
+  }
+  header {
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .menuPrincipal {
+    display: flex;
+    justify-content: center;
+  }
+  .logo {
+    height: 90%;
+  }
+  .eslogan {
+    grid-area: frase;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  main {
+    grid-area: main;
+  }
+  .informacion {
+    text-align: justify;
+  }
+  .eventosTodos {
+    display: flex;
+    flex-wrap: column;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+  .divEvento {
+    background-color: rgba(216, 229, 121, 0.5);
+    border-radius: 1rem;
+    padding: 2%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .imagenEvento {
+    width: 50%;
+  }
+  .textoEvento {
+    text-align: center;
+  }
+  footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .grillaIndex {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10em 10em auto 10em;
+    grid-row-gap: 5px;
+    grid-template-areas: "header header header" "frase frase frase" "main main main" "footer aside aside";
+    margin: 2%;
+  }
+  header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .menuPrincipal {
+    display: flex;
+    justify-content: center;
+  }
+  .logo {
+    height: 90%;
+  }
+  .eslogan {
+    grid-area: frase;
+    font-size: 140%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main {
+    grid-area: main;
+  }
+  .informacion {
+    text-align: justify;
+    margin: 3%;
+  }
+  .tituloEventos {
+    font-size: 120%;
+  }
+  .eventosTodos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .divEvento {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    justify-self: stretch;
+    margin-left: 30px;
+  }
+  footer {
+    grid-area: footer;
+  }
+  aside {
+    grid-area: aside;
+  }
+}
+@media screen and (max-width: 480px) {
+  .grillaIndex {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10em 10em auto 5em 10em;
+    grid-row-gap: 5px;
+    grid-template-areas: "header header" "frase frase" "main main" "aside aside" "footer footer";
+    margin: 2%;
+  }
+  header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo {
+    height: 210px;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 70%;
+    margin-bottom: 1%;
+  }
+  .eslogan {
+    grid-area: frase;
+    font-size: 115%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main {
+    grid-area: main;
+  }
+  .informacion {
+    font-size: 55%;
+    text-align: justify;
+    margin: 3%;
+  }
+  .tituloEventos {
+    font-size: 100%;
+  }
+  .eventosTodos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .divEvento {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    justify-self: stretch;
+    margin-left: 15px;
+  }
+  aside {
+    grid-area: aside;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .newsletter {
+    font-size: 80%;
+    text-align: center;
+  }
+  footer {
+    grid-area: footer;
+    justify-items: center;
+  }
+  .listaSecundaria {
+    font-size: 70%;
+    text-align: center;
+  }
+}/*# sourceMappingURL=estilo.css.map */

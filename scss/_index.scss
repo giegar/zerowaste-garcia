@@ -1,0 +1,41 @@
+/*INDEX*/
+.eslogan{
+    font-size: $txt-enfatico;
+    line-height: 1em;
+    letter-spacing: 1rem;
+    text-align: left;
+}
+main{
+    .informacion{
+        font-size: $txt-contenido;
+    }
+    .apartado{
+        @include caja;
+    }
+}
+.eventos{
+    .tituloEventos{
+        font-size: $txt-titulo;
+    }
+    .eventosTodos{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        .divEvento{
+            background-color: $amarillo-trnsp;
+            border-radius: 1rem;
+            padding: 2%;
+            margin-top: 2%;
+            @include flex-row-center;
+            .imagenEvento{
+                width: 18em;
+            }
+            .textoEvento{
+                font-size: $txt-contenido;
+            }    
+        }
+    }
+}
+
