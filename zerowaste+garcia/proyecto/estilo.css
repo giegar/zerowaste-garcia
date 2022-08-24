@@ -1,0 +1,309 @@
+*{
+    padding: 0%;
+    margin:0%;
+    box-sizing: border-box;
+}
+/*ESTILO EN GENERAL*/
+body{
+    background: linear-gradient(to bottom, #d8e579, #6cdb64);
+    background-attachment: fixed;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 2.5em;
+    margin: 3rem;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menuPrincipal{
+    width: 100%;
+}
+.menu{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 70%;
+}
+.menuSecundario{
+    margin: 1rem;
+    padding: 0.5rem;
+}
+.listaSecundaria{
+    list-style-type: none;
+}
+li .boton{
+    color:#013237;
+    text-decoration: none;
+    margin-left: 1rem;
+    padding: 0.5rem;
+}
+.boton:hover{
+    background-color: #d8e579;
+    border-radius: 3rem;
+}
+section{
+    margin: 5% auto;
+}
+        /*INDEX*/
+.eslogan{
+    font-size: 5em;
+    line-height: 1em;
+    color: #013237;
+    text-align: left;
+}
+.eventosTodos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.divEvento{
+    background-color: rgb(216, 229, 121, 0.5);
+    border-radius: 1rem;
+    padding: 2%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.imagenEvento{
+    width: 90%;
+}
+.textoEvento{
+    font-size: 70%;
+    text-align: center;
+}
+        /*CONSEJOS*/
+        /*CONSUMO RESPONSABLE*/
+        /*CONTACTO*/
+        /*PRODUCTOS*/
+/*VERSION MOBILE*/
+@media screen and (max-width: 480px) {
+    .grillaIndex{
+        display: grid;  
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 10em 10em auto 5em 10em;
+        grid-row-gap: 5px;
+        grid-template-areas:
+        "header header"
+        "frase frase"
+        "main main"
+        "aside aside"
+        "footer footer";
+        margin: 2%;
+    }
+    header{
+        grid-area: header;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo{
+    height: 210px;
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 70%;
+        margin-bottom: 1%;
+    }
+    .eslogan{
+        grid-area: frase;
+        font-size: 115%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main{
+        grid-area: main;
+    }
+    .informacion{
+        font-size: 55%;
+        text-align: justify;
+        margin: 3%;
+    }
+    .tituloEventos{
+        font-size: 100%;
+    }
+    .eventosTodos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .divEvento{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        justify-self: stretch;
+        margin-left: 15px;
+    }
+    aside{
+        grid-area: aside;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .newsletter{
+        font-size: 80%;
+        text-align: center;
+    }
+    footer{
+        grid-area: footer;
+        justify-items: center;
+    }
+    .listaSecundaria{
+        font-size: 70%;
+        text-align: center;
+    }
+}
+/*VERSION TABLETA*/
+@media screen and (min-width: 481px) {
+    .grillaIndex{
+        display: grid;  
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 10em 10em auto 10em;
+        grid-row-gap: 5px;
+        grid-template-areas:
+        "header header header"
+        "frase frase frase"
+        "main main main"
+        "footer aside aside";
+        margin: 2%;
+    }
+    header{
+        grid-area: header;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .menuPrincipal{
+        display: flex;
+        justify-content: center;
+    }
+    .logo{
+        height: 90%;
+    }
+    .eslogan{
+        grid-area: frase;
+        font-size: 140%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main{
+        grid-area: main;
+    }
+    .informacion{
+        text-align: justify;
+        margin: 3%;
+    }
+    .tituloEventos{
+        font-size: 120%;
+    }
+    .eventosTodos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .divEvento{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        justify-self: stretch;
+        margin-left: 30px;
+    }
+    footer{
+        grid-area: footer;
+    }
+    aside{
+        grid-area: aside;
+    }
+}    
+/*VERSION DESKTOP*/        
+@media screen and (min-width: 1024px) {
+    .grillaIndex{
+        display: grid;  
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 10em 15em auto 10em;
+        grid-row-gap: 5px;
+        grid-template-areas:
+        "header header header"
+        "frase frase frase"
+        "main main main"
+        "footer aside aside";
+        margin: 2%;
+    }
+    header{
+        grid-area: header;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .menuPrincipal{
+        display: flex;
+        justify-content: center;
+    }
+    .logo{
+        height: 90%;
+    }
+    .eslogan{
+        grid-area: frase;
+        font-size: 10rem;
+        text-align: left;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    main{
+        grid-area: main;
+    }
+    .informacion{
+        text-align: justify;
+        margin: 3%;
+    }
+    .eventosTodos{
+        display: flex;
+        flex-wrap: column;
+        justify-content: space-between;
+        align-content: space-between;
+        
+    }
+    .divEvento{
+        background-color: rgb(216, 229, 121, 0.5);
+        border-radius: 1rem;
+        padding: 2%;
+        margin-top: 2%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .imagenEvento{
+        width: 50%;
+    }
+    .textoEvento{
+        font-size: 70%;
+        text-align: center;
+    }
+    footer{
+        grid-area: footer;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    aside{
+        grid-area: aside;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}   
