@@ -158,6 +158,53 @@ main .apartado {
   background-color: #d8e579;
 }
 
+.introduccion {
+  font-size: 2em;
+  background-color: rgba(216, 229, 121, 0.5);
+  padding: 1.2%;
+  margin-top: 2%;
+  border-radius: 2rem;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.formulario form fieldset {
+  background-color: rgba(216, 229, 121, 0.5);
+}
+.formulario form fieldset input {
+  width: 90%;
+}
+
+.red, .red .red--facebook, .red .red--instagram, .red .red--twitter {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1%;
+  border-radius: 2rem;
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.red .red--twitter {
+  background-color: aqua;
+}
+.red .red--instagram {
+  background-color: rgb(238, 54, 238);
+}
+.red .red--facebook {
+  background-color: rgb(31, 31, 253);
+}
+
 /** MEDIAQ INDEX**/
 @media screen and (min-width: 1024px) {
   .grillaIndex {

@@ -1,0 +1,43 @@
+.introduccion{
+    font-size: $txt-contenido;
+    @include caja;
+}
+.formulario{
+    form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        fieldset{
+            background-color: $amarillo-trnsp;
+            input{
+                width:90%;
+            }
+
+        }
+    }
+}
+.red {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1%;
+    border-radius: 2rem;
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .red--twitter {
+        @extend .red;
+        background-color: aqua;
+    }
+    .red--instagram {
+        @extend .red;
+        background-color: rgb(238, 54, 238);
+    }
+    .red--facebook {
+        @extend .red;
+        background-color: rgb(31, 31, 253);
+    }
+}
