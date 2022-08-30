@@ -2,42 +2,71 @@
     font-size: $txt-contenido;
     @include caja;
 }
-.formulario{
-    form{
+.contenidoContacto{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-        fieldset{
-            background-color: $amarillo-trnsp;
-            input{
-                width:90%;
+    flex-direction: row;
+    justify-content: space-around;
+    .formulario{
+        width: 60%;
+        form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+            fieldset{
+                background-color: $amarillo-trnsp;
+                width: 90%;
+                border-radius: 2rem;
+                border: solid $azul-oscuro 2px;
+                text-align: center;
+                input{
+                    margin: 3%;
+                    width: 90%;
+                    height: 2rem;
+                    background-color: $amarillo;
+                    border-radius: 2rem;
+                    border: solid $azul-oscuro 2px;
+                    text-align: center;
+                    font-size: 1em;
+                }
+                textarea{
+                    @extend input
+                }
+                .boton{
+                    background-color: $azul-oscuro;
+                    color: $amarillo-trnsp;
+                    &:hover{
+                        color: $amarillo;
+                    }
+                }
             }
-
+        }
+    }
+    .red {
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        margin-top: 1%;
+        border-radius: 2rem;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .red--twitter {
+            @extend .red;
+            background-color: aqua;
+        }
+        .red--instagram {
+            @extend .red;
+            background-color: rgb(238, 54, 238);
+        }
+        .red--facebook {
+            @extend .red;
+            background-color: rgb(31, 31, 253);
         }
     }
 }
-.red {
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 1%;
-    border-radius: 2rem;
-    width: 35rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .red--twitter {
-        @extend .red;
-        background-color: aqua;
-    }
-    .red--instagram {
-        @extend .red;
-        background-color: rgb(238, 54, 238);
-    }
-    .red--facebook {
-        @extend .red;
-        background-color: rgb(31, 31, 253);
-    }
-}
+

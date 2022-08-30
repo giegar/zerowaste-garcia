@@ -1,46 +1,59 @@
 header{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    .contLogo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .logo{
+            width: 200px;
+        }
+    }
     .menu{
         list-style-type: none;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        font-size: $txt-opciones;
         .boton{
+            font-size: 100%;
+            color: $negro;
             text-decoration: none;
             margin-left: 1rem;
             padding: 0.5rem;
             &:hover{
-                background-color: $amarillo;
+                background-color: $azul-oscuro;
                 border-radius: 3rem;
             }
         }
     }
 }    
 footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     .menuSecundario{
-        margin: 1rem;
-        padding: 0.5rem;    
         .listaSecundaria{
             list-style-type: none;    
             .boton{
-                font-size: $txt-opciones;
-                margin-left: 1rem;
-                padding: 0.5rem;
+                font-weight: bold;
+                color: $negro;
+                text-decoration: none;
                 &:hover{
-                    background-color: #d8e579;
-                    border-radius: 3rem;    
-                }    
+                    background-color: $azul-oscuro;
+                    border-radius: 3rem;
+                    
+                }
             }
         }
-    }
-}    
-aside{
-    .newsletter{
-        font-size: $txt-enfatico;
-    }
-}    
+    } 
+    aside{
+        .newsletter{
+            font-size: $txt-enfatico;
+            color:$azul-oscuro;
+        }
+    }   
+}
 
 

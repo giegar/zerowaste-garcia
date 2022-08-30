@@ -1,107 +1,107 @@
 /** MEDIAQ INDEX**/
         @media screen and (min-width: 1024px) {
             .grillaIndex{
-                display: grid;  
-                grid-template-columns: 50% 50%;
-                grid-template-rows: 10em 15em auto 10em;
-                grid-row-gap: 5px;
-                grid-template-areas:
+                display: grid;
+                grid-template-columns: 33.3% 33.3% 33.3%;
+                grid-template-rows: 5% 15% auto 10%;
+                grid-row-gap: 1%;
+                grid-template-areas: 
                 "header header header"
                 "frase frase frase"
                 "main main main"
-                "footer aside aside";
-                margin: 2%;
+                "footer footer footer";
             }
-            header{
-                grid-area: header;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: center;
-            }
-            .menuPrincipal{
-                display: flex;
-                justify-content: center;
-            }
-            .logo{
-                height: 90%;
-            }
-            .eslogan{
-                grid-area: frase;
-                margin-top: 1em;
-                margin-bottom: 1em;
-            }
-            main{
-                grid-area: main;
-            }
-            .informacion{
-                text-align: justify;
-                
-            }
-            .eventosTodos{
-                display: flex;
-                flex-wrap: column;
-                justify-content: space-between;
-                align-content: space-between;
-                
-            }
-            .divEvento{
-                background-color: rgb(216, 229, 121, 0.5);
-                border-radius: 1rem;
-                padding: 2%;
-                margin-top: 2%;
-                @include flex-row-center;
-            }
-            .imagenEvento{
-                width: 50%;
-            }
-            .textoEvento{
-                text-align: center;
-            }
-            footer{
-                grid-area: footer;
-                @include flex-row-center;
-            }
-            aside{
-                grid-area: aside;
-                @include flex-row-center
-            }
-        }  
 
-    
+                .header{
+                    grid-area: header;
+                }
+                .boton{
+                    font-size: 100%;
+                }
+                .cajaEslogan{
+                    grid-area: frase;
+                    .eslogan{
+                        font-size: 600%;
+                        line-height: 110%;
+                    }
+                    .dibujoPlaneta{
+                        position: absolute;
+                        top: 35%;
+                        left: 65%;
+                    }
+                }
+                main{
+                    grid-area: main;
+                    .eventos{
+                        grid-area: eventos;
+                            .eventosTodos{
+                                .divEvento{
+                                    .textoEvento{
+                                        font-size: $txt-contenido;
+                                    }
+                                }
+                            }
+                    }
+                }
+                footer{
+                    grid-area: footer;
+                    justify-content: space-around;
+                    .menuSecundario{
+                        font-size: 200%;
+                        align-content: space-around;
+                    }
+                    .newsletter{
+                        width: 45%;
+                        font-size: 220%;
+                        color: $azul-oscuro;
+                        text-align: left;
+                    }
+                }        
+            }
+        
         @media screen and (max-width: 1023px) {
             .grillaIndex{
                 display: grid;  
                 grid-template-columns: 50% 50%;
-                grid-template-rows: 10em 10em auto 10em;
-                grid-row-gap: 5px;
+                grid-template-rows: 5% auto auto 10em;
+                grid-row-gap: 2%;
                 grid-template-areas:
-                "header header header"
-                "frase frase frase"
-                "main main main"
-                "footer aside aside";
-                margin: 2%;
+                "header header"
+                "frase frase"
+                "main main"
+                "footer footer";
+                margin: 3%;
             }
             header{
                 grid-area: header;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-            }
-            .menuPrincipal{
-                display: flex;
                 justify-content: center;
+                align-items: center;
             }
             .logo{
-                height: 90%;
+                width: 50%
             }
-            .eslogan{
-                grid-area: frase;
-                font-size: 140%;
+            .menuPrincipal{
+                @include flex-row-center;
+            }
+            .menu{
                 display: flex;
                 justify-content: center;
                 align-items: center;
+            }
+            .boton{
+                font-size: 100%;
+            }
+            .cajaEslogan{
+                grid-area: frase;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .dibujoPlaneta{
+                position: absolute;
+                right: 5rem;
             }
             main{
                 grid-area: main;
@@ -110,36 +110,37 @@
                 text-align: justify;
                 margin: 3%;
             }
-            .tituloEventos{
-                font-size: 120%;
-            }
+            
             .eventosTodos{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-around;
+                width: 100%;
+                @include flex-row-center;
+                justify-content: space-between;
             }
             .divEvento{
-                width: 90%;
                 display: flex;
                 flex-direction: column;
                 align-self: stretch;
                 justify-self: stretch;
-                margin-left: 30px;
             }
             footer{
                 grid-area: footer;
+                justify-content: space-between;
+                align-items: center;
             }
             aside{
                 grid-area: aside;
+                height: 100%;
+                width: 50%;
+                font-size: $txt-contenido;
+                color: $azul-oscuro;
             }
-        }    
-    
-        @media screen and (max-width: 480px) {
+        }
+
+        @media screen and (max-width: 600px) {
             .grillaIndex{
                 display: grid;  
                 grid-template-columns: 50% 50%;
-                grid-template-rows: 10em 10em auto 5em 10em;
+                grid-template-rows: 15% 10% auto 5% 10%;
                 grid-row-gap: 5px;
                 grid-template-areas:
                 "header header"
@@ -156,22 +157,25 @@
                 align-items: center;
             }
             .logo{
-            height: 210px;
+            height: 45%;
             }
             .menu{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                font-size: 70%;
                 margin-bottom: 1%;
             }
-            .eslogan{
+            .cajaEslogan{
                 grid-area: frase;
-                font-size: 115%;
-                text-align: center;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                .dibujoPlaneta{
+                    width: 70%;
+                }
+                .eslogan{
+                    text-align: center;
+                }
             }
             main{
                 grid-area: main;

@@ -1,0 +1,28 @@
+.encabezado{
+    @include caja;
+    font-size: $txt-contenido;
+}
+.categoria{
+    font-size: 300%;
+    text-align: center;
+    color: $azul-oscuro;
+}
+.seccionProductos{
+    @include flex-row-center;
+    justify-content: space-around;
+    .producto{
+        @include caja;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 20%;
+        .imagenProducto{
+            width: 95%;
+            border-radius: 2rem;
+        }
+        .tituloProducto{
+            font-size: $txt-contenido
+        }
+    }
+    
+}
