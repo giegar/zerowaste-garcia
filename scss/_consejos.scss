@@ -1,19 +1,21 @@
 .mainConsejos{
     .introduccion{
-        font-size: $txt-contenido;
+        @include cont-txt;
         @include caja;
+        padding: 4%;
         .txtNegrita{
             font-weight: bold;
         }
     }
     .apartado{
         @include caja;
+        padding: 4%;
         .subtitulo{
             font-size: $txt-titulo;
             color: $azul-oscuro;
         }
         .listaConsejos{
-            font-size: $txt-contenido;
+            @include cont-txt;
             list-style-type: none;
         }
     }

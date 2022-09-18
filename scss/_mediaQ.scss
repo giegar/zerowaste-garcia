@@ -1,224 +1,1329 @@
-/** MEDIAQ INDEX**/
-        @media screen and (min-width: 1024px) {
-            .grillaIndex{
-                display: grid;
-                grid-template-columns: 33.3% 33.3% 33.3%;
-                grid-template-rows: 5% 15% auto 10%;
+
+/**
+BREAKPOINTS
+Mobile hasta 576px
+Pantalla chica hasta 769px
+Pantalla mediana hasta 992px
+Pantalla grande hasta 1200px
+Pantalla XL de 1200px en adelante
+**/
+
+/**************** MOBILE (HASTA 576px) ****************/
+        @media screen and (max-width: 576px) {
+            .grilla{
+                display: grid;  
+                grid-template-columns: 100%;
+                grid-template-rows: 100vh auto 100vh;
                 grid-row-gap: 1%;
-                grid-template-areas: 
-                "header header header"
-                "frase frase frase"
-                "main main main"
-                "footer footer footer";
+                grid-template-areas:
+                "header"
+                "main"
+                "footer";
+            }
+            /**HEADER Y FOOTER**/
+            header{
+                grid-area: header;
+                @include flex-column-center;
+                justify-content: space-around;
+                .contLogo{
+                    width: 90%;
+                    margin: 5%;
+                    .logo{
+                        width: 100%
+                    }
+                }
+                .menuPrincipal{
+                    width: 100%;
+                    height: 40%;
+                    margin: 4%;
+                    @include flex-column-center;
+                    .menu{
+                        @include flex-column-center;
+                        justify-content: space-between;
+                        height: 100%;
+                        width: 80%;
+                        background-color: $amarillo-trnsp;
+                        border-radius: 2rem;
+                        .boton{
+                            font-size: 7vw;
+                            width: 100%;
+                            margin-bottom: 2em;
+                            padding: 0.1em;
+                            
+                        }
+                    }
+                }
+            }
+            footer{
+                grid-area: footer;
+                display: flex;
+                flex-direction: column-reverse;
+                justify-items: center;
+                margin-bottom: 5%;
+                .menuSecundario{
+                    margin-bottom: 2rem;
+                    .listaSecundaria{
+                        @include flex-column-center;
+                        text-align: center;
+                        .boton{
+                            font-size: 6vw;
+                        }
+                    }
+                }
+                aside{
+                    width: 100%;
+                    @include flex-column-center;
+                    margin: 4%;
+                    .newsletter{
+                        text-align: center;
+                        font-size: 15vw;
+                    }
+                    div{
+                        width: 100%;
+                        margin: 5%;
+                        input{
+                            width: 90%;
+                            font-size: 4vw;
+                            margin: 3%;
+                        }
+                        .botonNews{
+                            width: 30%;
+                        }
+                    }
+                }
             }
 
-                .header{
-                    grid-area: header;
-                }
-                .boton{
-                    font-size: 100%;
-                }
+            /**INDEX**/
+            .mainIndex{
+                grid-area: main;
+                margin: 1%;
+                
                 .cajaEslogan{
+                    height: fit-content;
                     grid-area: frase;
-                    .eslogan{
-                        font-size: 600%;
-                        line-height: 110%;
-                    }
+                    @include flex-column-reverse;
                     .dibujoPlaneta{
-                        position: absolute;
-                        top: 35%;
-                        left: 65%;
+                        width: 45%;
                     }
+                    .eslogan{
+                        text-align: center;
+                        font-size: 10vw;
+                        line-height: normal;
+                    }    
                 }
-                main{
-                    grid-area: main;
-                    .eventos{
-                        grid-area: eventos;
-                            .eventosTodos{
-                                .divEvento{
-                                    .textoEvento{
-                                        font-size: $txt-contenido;
-                                    }
+                .informacion{
+                    width: 100%;
+                    .apartado{
+                        .subtitulo{
+                            font-size: 7vw;
+                            text-align: center;
+                        }
+                        p{
+                            font-size: 7vw;
+                        }
+                    }
+
+                }
+                .eventos{
+                    @include flex-column-center;
+                    width: 100%;
+                    margin-top: 5%;
+                    .tituloEventos{
+                        font-size: 8vw;
+                    }    
+                        .eventosTodos{
+                            @include flex-column-center;
+                            width: 100%;
+                        .divEvento{
+                            width: auto;
+                            .imagenEvento{
+                                margin: 2%;
+                            }
+                            .textoEvento{
+                                font-size: 7vw;
+                                h3{
+                                    text-align: center;
                                 }
                             }
+                        }
                     }
                 }
-                footer{
-                    grid-area: footer;
-                    justify-content: space-around;
-                    .menuSecundario{
-                        font-size: 200%;
-                        align-content: space-around;
-                    }
-                    .newsletter{
-                        width: 45%;
-                        font-size: 220%;
-                        color: $azul-oscuro;
-                        text-align: left;
-                    }
-                }        
             }
-        
-        @media screen and (max-width: 1023px) {
-            .grillaIndex{
-                display: grid;  
-                grid-template-columns: 50% 50%;
-                grid-template-rows: 5% auto auto 10em;
-                grid-row-gap: 2%;
-                grid-template-areas:
-                "header header"
-                "frase frase"
-                "main main"
-                "footer footer";
-                margin: 3%;
-            }
-            header{
-                grid-area: header;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-            .logo{
-                width: 50%
-            }
-            .menuPrincipal{
-                @include flex-row-center;
-            }
-            .menu{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .boton{
-                font-size: 100%;
-            }
-            .cajaEslogan{
-                grid-area: frase;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .dibujoPlaneta{
-                position: absolute;
-                right: 5rem;
-            }
-            main{
+
+            /**CONSEJOS**/
+            .mainConsejos{
                 grid-area: main;
+                .introduccion{
+                    font-size: 7vw;
+                }
+                .apartado{
+                    .subtitulo{
+                        font-size: 8vw;
+                        text-align: center;
+                    }
+                    .listaConsejos{
+                        font-size: 7vw;
+                    }
+                }
             }
-            .informacion{
-                text-align: justify;
-                margin: 3%;
+
+            /**CONSUMO RESPONSABLE**/
+            .mainConsResp{
+                grid-area: main;
+                .apartado{
+                    h1{
+                        font-size: 8vw;
+                        text-align: center;
+                    }
+                    p{
+                        font-size: 7vw;
+                    }
+                }
+                .cajaPreguntas{
+                    .subtitulo{
+                        font-size: 8vw;
+                    }
+                    .listaPreguntas{
+                        .pregunta{
+                            font-size: 7vw;
+                            margin-top: 4%;
+                        }
+                    }
+                }
             }
-            
-            .eventosTodos{
-                width: 100%;
-                @include flex-row-center;
-                justify-content: space-between;
+
+            /**PRODUCTOS**/
+            .mainProductos{
+                grid-area: main;
+                .encabezado{
+                    h1{
+                        font-size: 8vw;
+                    }
+                    p{
+                        font-size: 7vw;
+                    }
+                }
+                .seccionProductos{
+                    .categoria{
+                        font-size: 8vw;
+                    }
+                    .productosRow{
+                        @include flex-column-center;
+                        .producto{
+                            margin-top: 4%;
+                            .imagenProducto{
+                                width: 100%;
+                                opacity: 1; 
+                            }
+                            .tituloProducto{
+                                font-size: 7vw;
+                            }
+                            .botonComprar{
+                                font-size: 5vw;
+                            }
+                        }
+                    }
+                }
             }
-            .divEvento{
-                display: flex;
-                flex-direction: column;
-                align-self: stretch;
-                justify-self: stretch;
-            }
-            footer{
-                grid-area: footer;
-                justify-content: space-between;
-                align-items: center;
-            }
-            aside{
-                grid-area: aside;
-                height: 100%;
-                width: 50%;
-                font-size: $txt-contenido;
-                color: $azul-oscuro;
+
+            /**CONTACTO**/
+            .mainContacto{
+                grid-area: main;
+                .introduccion{
+                    font-size: 7vw;
+                }
+                .contenidoContacto{
+                    width: 100%;
+                    margin-bottom: 5%;
+                    .formulario{
+                        width: 100%;
+                        form{
+                            input{
+                                font-size: 7vw;
+                            }
+                            textarea{
+                                    height: 40vh;
+                                    font-size: 7vw;
+                                }
+                            
+                        }
+                    }
+                }
+                .redes{
+                    width: 100%;
+                    padding: 5%;
+                    .logosRedes{
+                        @include flex-row-center;
+                        width: 90%;
+                        margin: 4%;
+                        .icono{
+                            width: 10vh;
+                            margin: 1em;
+                        }
+                    }
+                    
+                }
             }
         }
-
-        @media screen and (max-width: 600px) {
-            .grillaIndex{
-                display: grid;  
-                grid-template-columns: 50% 50%;
-                grid-template-rows: 15% 10% auto 5% 10%;
-                grid-row-gap: 5px;
-                grid-template-areas:
-                "header header"
-                "frase frase"
-                "main main"
-                "aside aside"
-                "footer footer";
-                margin: 2%;
-            }
-            header{
-                grid-area: header;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
+        
+/************* PANTALLAS CHICAS (DE 576 A 769)**************/
+@media screen and (min-width: 577px) {
+    .grilla{
+        display: grid;  
+        grid-template-columns: 100%;
+        grid-template-rows: 100vh auto 100vh;
+        grid-row-gap: 1%;
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    }
+    /**HEADER Y FOOTER**/
+    header{
+        grid-area: header;
+        @include flex-column-center;
+        justify-content: space-around;
+        .contLogo{
+            width: 70%;
+            margin: 5%;
             .logo{
-            height: 45%;
+                width: 100%
             }
+        }
+        .menuPrincipal{
+            width: 100%;
+            height: 40%;
+            margin: 4%;
+            @include flex-column-center;
             .menu{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin-bottom: 1%;
-            }
-            .cajaEslogan{
-                grid-area: frase;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                .dibujoPlaneta{
-                    width: 70%;
+                @include flex-column-center;
+                justify-content: space-between;
+                height: 100%;
+                width: 80%;
+                background-color: $amarillo-trnsp;
+                border-radius: 2rem;
+                .boton{
+                    font-size: 5vw;
+                    width: 100%;
+                    margin-bottom: 2em;
+                    padding: 0.1em;
+                    
                 }
-                .eslogan{
+            }
+        }
+    }
+    footer{
+        grid-area: footer;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-items: center;
+        margin-bottom: 5%;
+        .menuSecundario{
+            margin-bottom: 2rem;
+            .listaSecundaria{
+                @include flex-column-center;
+                text-align: center;
+                .boton{
+                    font-size: 5vw;
+                }
+            }
+        }
+        aside{
+            width: 100%;
+            @include flex-column-center;
+            margin: 4%;
+            .newsletter{
+                text-align: center;
+                font-size: 8vw;
+            }
+            div{
+                width: 100%;
+                margin: 5%;
+                input{
+                    width: 90%;
+                    font-size: 3vw;
+                    margin: 3%;
+                }
+                .botonNews{
+                    width: 30%;
+                }
+            }
+        }
+    }
+
+    /**INDEX**/
+    .mainIndex{
+        grid-area: main;
+        margin: 1%;
+        
+        .cajaEslogan{
+            height: fit-content;
+            grid-area: frase;
+            @include flex-column-reverse;
+            .dibujoPlaneta{
+                width: 45%;
+            }
+            .eslogan{
+                text-align: center;
+                font-size: 12vw;
+                line-height: normal;
+            }    
+        }
+        .informacion{
+            width: 100%;
+            .apartado{
+                .subtitulo{
+                    font-size: 5vw;
                     text-align: center;
                 }
+                p{
+                    font-size: 5vw;
+                }
             }
-            main{
-                grid-area: main;
-            }
-            .informacion{
-                font-size: 55%;
-                text-align: justify;
-                margin: 3%;
-            }
+
+        }
+        .eventos{
+            @include flex-column-center;
+            width: 100%;
+            margin-top: 5%;
             .tituloEventos{
-                font-size: 100%;
-            }
-            .eventosTodos{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-around;
-            }
-            .divEvento{
-                width: 90%;
-                display: flex;
-                flex-direction: column;
-                align-self: stretch;
-                justify-self: stretch;
-                margin-left: 15px;
-            }
-            aside{
-                grid-area: aside;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .newsletter{
-                font-size: 80%;
-                text-align: center;
-            }
-            footer{
-                grid-area: footer;
-                justify-items: center;
-            }
-            .listaSecundaria{
-                font-size: 70%;
-                text-align: center;
+                font-size: 7vw;
+            }    
+                .eventosTodos{
+                    @include flex-column-center;
+                    width: 100%;
+                .divEvento{
+                    width: auto;
+                    .imagenEvento{
+                        margin: 2%;
+                    }
+                    .textoEvento{
+                        font-size: 5vw;
+                        h3{
+                            text-align: center;
+                        }
+                    }
+                }
             }
         }
-    
+    }
+
+    /**CONSEJOS**/
+    .mainConsejos{
+        grid-area: main;
+        .introduccion{
+            font-size: 5vw;
+        }
+        .apartado{
+            .subtitulo{
+                font-size: 5vw;
+                text-align: center;
+            }
+            .listaConsejos{
+                font-size: 5vw;
+            }
+        }
+    }
+
+    /**CONSUMO RESPONSABLE**/
+    .mainConsResp{
+        grid-area: main;
+        .apartado{
+            h1{
+                font-size: 5vw;
+                text-align: center;
+            }
+            p{
+                font-size: 5vw;
+            }
+        }
+        .cajaPreguntas{
+            .subtitulo{
+                font-size: 5vw;
+            }
+            .listaPreguntas{
+                .pregunta{
+                    font-size: 5vw;
+                    margin-top: 4%;
+                }
+            }
+        }
+    }
+
+    /**PRODUCTOS**/
+    .mainProductos{
+        grid-area: main;
+        .encabezado{
+            h1{
+                font-size: 5vw;
+            }
+            p{
+                font-size: 5vw;
+            }
+        }
+        .seccionProductos{
+            .categoria{
+                font-size: 5vw;
+            }
+            .productosRow{
+                @include flex-column-center;
+                .producto{
+                    margin-top: 4%;
+                    .imagenProducto{
+                        width: 90%;
+                        opacity: 1; 
+                    }
+                    .tituloProducto{
+                        font-size: 5vw;
+                    }
+                    .botonComprar{
+                        font-size: 4vw;
+                    }
+                }
+            }
+        }
+    }
+
+    /**CONTACTO**/
+    .mainContacto{
+        grid-area: main;
+        .introduccion{
+            font-size: 5vw;
+        }
+        .contenidoContacto{
+            width: 100%;
+            margin-bottom: 5%;
+            .formulario{
+                width: 100%;
+                form{
+                    input{
+                        font-size: 3vw;
+                    }
+                    textarea{
+                            height: 40vh;
+                            font-size: 5vw;
+                        }
+                    
+                }
+            }
+        }
+        .redes{
+            width: 100%;
+            padding: 5%;
+            .logosRedes{
+                @include flex-row-center;
+                width: 90%;
+                margin: 4%;
+                .icono{
+                    width: 10vh;
+                    margin: 1em;
+                }
+            }
+            
+        }
+    }
+}
+/******** PANTALLAS MEDIANA (770 A 992) ********/
+@media screen and (min-width: 769px) {
+    .grilla{
+        display: grid;  
+        grid-template-columns: 100%;
+        grid-template-rows: 50vh auto 100vh;
+        row-gap: 1rem;
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    }
+    /**HEADER Y FOOTER**/
+    header{
+        grid-area: header;
+        @include flex-column-center;
+        justify-content:center;
+        .contLogo{
+            width: 30%;
+            margin:1%;
+            .logo{
+                width: 100%
+            }
+        }
+        .menuPrincipal{
+            width: 100%;
+            height: 20%;
+            @include flex-row-center;
+            .menu{
+                @include flex-row-center;
+                justify-content: space-between;
+                height: 100%;
+                width: 100%;
+                background-color: $amarillo-trnsp;
+                border-radius: 2rem;
+                .boton{
+                    font-size: 3.5vw;
+                    width: 100%;
+                    margin-bottom: 4%;
+                    padding: 0.1em;
+                    
+                }
+            }
+        }
+    }
+    footer{
+        grid-area: footer;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-items: center;
+        margin-bottom: 5%;
+        .menuSecundario{
+            width: 100%;
+            margin-bottom: 2rem;
+            .listaSecundaria{
+                @include flex-row-center;
+                text-align: center;
+                justify-content: space-between;
+                .boton{
+                    font-size: 3vw;
+                }
+            }
+        }
+        aside{
+            width: 100%;
+            @include flex-column-center;
+            margin: 4%;
+            .newsletter{
+                text-align: center;
+                font-size: 7vw;
+            }
+            div{
+                width: 100%;
+                margin: 5%;
+                input{
+                    width: 90%;
+                    font-size: 3vw;
+                    margin: 3%;
+                }
+                .botonNews{
+                    width: 30%;
+                }
+            }
+        }
+    }
+
+    /**INDEX**/
+    .mainIndex{
+        grid-area: main;
+        margin: 1%;
+        .cajaEslogan{
+            height: fit-content;
+            grid-area: frase;
+            @include flex-row-center;
+            .dibujoPlaneta{
+                width: 35%;
+            }
+            .eslogan{
+                text-align: left;
+                font-size: 7.5vw;
+                line-height: normal;
+            }    
+        }
+        .informacion{
+            width: 100%;
+            .apartado{
+                .subtitulo{
+                    font-size: 4vw;
+                    text-align: center;
+                }
+                p{
+                    font-size: 4vw;
+                }
+            }
+
+        }
+        .eventos{
+            @include flex-column-center;
+            width: 100%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            .tituloEventos{
+                font-size: 5vw;
+            }    
+                .eventosTodos{
+                    @include flex-column-center;
+                    width: 100%;
+                .divEvento{
+                    @include flex-column-center;
+                    width: auto;
+                    .imagenEvento{
+                        margin: 2%;
+                        width: 70%;
+                    }
+                    .textoEvento{
+                        font-size: 3vw;
+                        h3{
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /**CONSEJOS**/
+    .mainConsejos{
+        grid-area: main;
+        .introduccion{
+            font-size: 4vw;
+        }
+        .apartado{
+            .subtitulo{
+                font-size: 4vw;
+                text-align: center;
+            }
+            .listaConsejos{
+                font-size: 4vw;
+            }
+        }
+    }
+
+    /**CONSUMO RESPONSABLE**/
+    .mainConsResp{
+        grid-area: main;
+        .apartado{
+            h1{
+                font-size: 4vw;
+                text-align: center;
+            }
+            p{
+                font-size: 4vw;
+            }
+        }
+        .cajaPreguntas{
+            .subtitulo{
+                font-size: 4vw;
+            }
+            .listaPreguntas{
+                .pregunta{
+                    font-size: 4vw;
+                    margin-top: 4%;
+                }
+            }
+        }
+    }
+
+    /**PRODUCTOS**/
+    .mainProductos{
+        grid-area: main;
+        .encabezado{
+            h1{
+                font-size: 4vw;
+            }
+            p{
+                font-size: 4vw;
+            }
+        }
+        .seccionProductos{
+            .categoria{
+                font-size: 5vw;
+            }
+            .productosRow{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                .producto{
+                    width:40%;
+                    margin-top: 4%;
+                    .imagenProducto{
+                        width: 95%;
+                        opacity: 1; 
+                    }
+                    .tituloProducto{
+                        font-size: 3vw;
+                    }
+                    .botonComprar{
+                        font-size: 3vw;
+                        width:40%;
+                    }
+                }
+            }
+        }
+    }
+
+    /**CONTACTO**/
+    .mainContacto{
+        grid-area: main;
+        .introduccion{
+            font-size: 5vw;
+        }
+        .contenidoContacto{
+            width: 100%;
+            margin-bottom: 0%;
+            .formulario{
+                width: 100%;
+                form{
+                    input{
+                        font-size: 3vw;
+                    }
+                    textarea{
+                            height: 40vh;
+                            font-size: 5vw;
+                        }
+                    
+                }
+            }
+        }
+        .redes{
+            width: 100%;
+            padding: 1%;
+            .logosRedes{
+                @include flex-row-center;
+                width: 90%;
+                margin: 4%;
+                .icono{
+                    width: 10vh;
+                    margin: 1em;
+                }
+            }
+            
+        }
+    }
+}
+        
+/******** PANTALLAS GRANDES (993 A 1200) ********/
+@media screen and (min-width: 993px) {
+    .grilla{
+        display: grid;  
+        grid-template-columns: 100%;
+        grid-template-rows: 25vh auto 45vh;
+        row-gap: 1rem;
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    }
+    /**HEADER Y FOOTER**/
+    header{
+        grid-area: header;
+        @include flex-row-center;
+        justify-content:space-between;
+        .contLogo{
+            width: 25%;
+            margin:1%;
+            .logo{
+                width: 100%
+            }
+        }
+        .menuPrincipal{
+            width: 70%;
+            height: 20%;
+            margin: 1%;
+            @include flex-row-center;
+            .menu{
+                @include flex-row-center;
+                justify-content: space-between;
+                height: 100%;
+                width: 100%;
+                background-color: $amarillo-trnsp;
+                border-radius: 2rem;
+                .boton{
+                    font-size: 2.5vw;
+                    
+                    margin-bottom: 4%;
+                    padding: 0.1em;
+                    
+                }
+            }
+        }
+    }
+    footer{
+        grid-area: footer;
+        @include flex-row-center;
+        margin-bottom: 5%;
+        .menuSecundario{
+            text-align: left;
+            width: 100%;
+            margin-bottom: 2rem;
+            .listaSecundaria{
+                @include flex-column-center;
+                justify-content: space-between;
+                text-align: left;
+                .boton{
+                    font-size: 3vw;
+                }
+            }
+        }
+        aside{
+            width: 100%;
+            @include flex-column-center;
+            margin: 4%;
+            .newsletter{
+                text-align: center;
+                font-size: 5vw;
+            }
+            div{
+                width: 100%;
+                margin: 5%;
+                input{
+                    width: 90%;
+                    font-size: 3vw;
+                    margin: 3%;
+                }
+                .botonNews{
+                    width: 30%;
+                    font-size: 2vw;
+                }
+            }
+        }
+    }
+
+    /**INDEX**/
+    .mainIndex{
+        grid-area: main;
+        margin: 1%;
+        .cajaEslogan{
+            height: fit-content;
+            grid-area: frase;
+            @include flex-row-center;
+            .dibujoPlaneta{
+                width: 35%;
+            }
+            .eslogan{
+                text-align: left;
+                font-size: 7.5vw;
+                line-height: normal;
+            }    
+        }
+        .informacion{
+            width: 100%;
+            .apartado{
+                .subtitulo{
+                    font-size: 3vw;
+                    text-align: center;
+                }
+                p{
+                    font-size: 3vw;
+                }
+            }
+
+        }
+        .eventos{
+            @include flex-column-center;
+            width: 100%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            .tituloEventos{
+                font-size: 4vw;
+            }    
+                .eventosTodos{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: flex-start;
+                    width: 100%;
+                .divEvento{
+                    @include flex-column-center;
+                    width: 45%;
+                    margin: 1%;
+                    .imagenEvento{
+                        margin: 2%;
+                        width: 70%;
+                    }
+                    .textoEvento{
+                        font-size: 3vw;
+                        h3{
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /**CONSEJOS**/
+    .mainConsejos{
+        grid-area: main;
+        .introduccion{
+            font-size: 3vw;
+        }
+        .apartado{
+            .subtitulo{
+                font-size: 3vw;
+                text-align: center;
+            }
+            .listaConsejos{
+                font-size: 3vw;
+            }
+        }
+    }
+
+    /**CONSUMO RESPONSABLE**/
+    .mainConsResp{
+        grid-area: main;
+        .apartado{
+            h1{
+                font-size: 3vw;
+                text-align: center;
+            }
+            p{
+                font-size: 3vw;
+            }
+        }
+        .cajaPreguntas{
+            .subtitulo{
+                font-size: 4vw;
+            }
+            .listaPreguntas{
+                .pregunta{
+                    font-size: 3vw;
+                    margin-top: 4%;
+                }
+            }
+        }
+    }
+
+    /**PRODUCTOS**/
+    .mainProductos{
+        grid-area: main;
+        .encabezado{
+            h1{
+                font-size: 4vw;
+            }
+            p{
+                font-size: 3vw;
+            }
+        }
+        .seccionProductos{
+            .categoria{
+                font-size: 4vw;
+            }
+            .productosRow{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                .producto{
+                    width:40%;
+                    margin-top: 4%;
+                    .imagenProducto{
+                        width: 95%;
+                        opacity: 1; 
+                    }
+                    .tituloProducto{
+                        font-size: 3vw;
+                    }
+                    .botonComprar{
+                        font-size: 3vw;
+                        width:40%;
+                    }
+                }
+            }
+        }
+    }
+
+    /**CONTACTO**/
+    .mainContacto{
+        grid-area: main;
+        .introduccion{
+            font-size: 3vw;
+        }
+        .contenidoContacto{
+            width: 100%;
+            margin-bottom: 0%;
+            .formulario{
+                width: 100%;
+                form{
+                    input{
+                        font-size: 3vw;
+                    }
+                    textarea{
+                            height: 40vh;
+                            font-size: 3vw;
+                        }
+                    
+                }
+            }
+        }
+        .redes{
+            width: 100%;
+            padding: 1%;
+            .logosRedes{
+                @include flex-row-center;
+                width: 90%;
+                margin: 4%;
+                .icono{
+                    width: 10vw;
+                    margin: 1em;
+                }
+            }
+            
+        }
+    }
+}
+
+/******** PANTALLAS XL (SUPERIOR A 1200) ********/
+@media screen and (min-width: 1200px) {
+    .grilla{
+        display: grid;  
+        grid-template-columns: 100%;
+        grid-template-rows: 25vh auto 45vh;
+        row-gap: 1rem;
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    }
+    /**HEADER Y FOOTER**/
+    header{
+        grid-area: header;
+        @include flex-row-center;
+        justify-content:space-between;
+        .contLogo{
+            width: 20%;
+            margin:1%;
+            .logo{
+                width: 100%
+            }
+        }
+        .menuPrincipal{
+            width: 70%;
+            height: 30%;
+            margin: 1%;
+            @include flex-row-center;
+            .menu{
+                @include flex-row-center;
+                justify-content: space-between;
+                height: 100%;
+                width: 100%;
+                background-color: $amarillo-trnsp;
+                border-radius: 2rem;
+                .boton{
+                    font-size: 2vw;
+                    margin-bottom: 4%;
+                    padding: 0.2em;
+                    
+                }
+            }
+        }
+    }
+    footer{
+        grid-area: footer;
+        @include flex-row-center;
+        margin-bottom: 5%;
+        .menuSecundario{
+            text-align: left;
+            width: 100%;
+            margin-bottom: 2rem;
+            .listaSecundaria{
+                @include flex-column-center;
+                justify-content: space-between;
+                .boton{
+                    font-size: 2.5vw;
+                    align-self: flex-start;
+                }
+            }
+        }
+        aside{
+            width: 100%;
+            @include flex-column-center;
+            margin: 4%;
+            .newsletter{
+                text-align: center;
+                font-size: 4vw;
+            }
+            div{
+                width: 100%;
+                margin: 5%;
+                input{
+                    width: 90%;
+                    font-size: 2vw;
+                    margin: 3%;
+                }
+                .botonNews{
+                    width: 30%;
+                    font-size: 1vw;
+                }
+            }
+        }
+    }
+
+    /**INDEX**/
+    .mainIndex{
+        grid-area: main;
+        margin: 1%;
+        .cajaEslogan{
+            height: fit-content;
+            grid-area: frase;
+            @include flex-row-center;
+            .dibujoPlaneta{
+                width: 40%;
+            }
+            .eslogan{
+                text-align: left;
+                font-size: 7.5vw;
+                line-height: normal;
+            }    
+        }
+        .informacion{
+            width: 100%;
+            .apartado{
+                .subtitulo{
+                    font-size: 2.5vw;
+                    text-align: center;
+                }
+                p{
+                    font-size: 2.5vw;
+                }
+            }
+
+        }
+        .eventos{
+            @include flex-column-center;
+            width: 100%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            .tituloEventos{
+                font-size: 3vw;
+            }    
+                .eventosTodos{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: flex-start;
+                    width: 100%;
+                .divEvento{
+                    @include flex-row-center;
+                    width: 100%;
+                    margin: 1%;
+                    .imagenEvento{
+                        margin: 2%;
+                        width: 50%;
+                    }
+                    .textoEvento{
+                        font-size: 1.8vw;
+                        h3{
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /**CONSEJOS**/
+    .mainConsejos{
+        grid-area: main;
+        .introduccion{
+            font-size: 2vw;
+        }
+        .apartado{
+            .subtitulo{
+                font-size: 3vw;
+                text-align: center;
+            }
+            .listaConsejos{
+                font-size: 2.5vw;
+            }
+        }
+    }
+
+    /**CONSUMO RESPONSABLE**/
+    .mainConsResp{
+        grid-area: main;
+        .apartado{
+            h1{
+                font-size: 2.5vw;
+                text-align: center;
+            }
+            p{
+                font-size: 2vw;
+            }
+        }
+        .cajaPreguntas{
+            .subtitulo{
+                font-size: 3vw;
+            }
+            .listaPreguntas{
+                .pregunta{
+                    font-size: 2vw;
+                    margin-top: 4%;
+                }
+            }
+        }
+    }
+
+    /**PRODUCTOS**/
+    .mainProductos{
+        grid-area: main;
+        .encabezado{
+            h1{
+                font-size: 3vw;
+            }
+            p{
+                font-size: 2vw;
+            }
+        }
+        .seccionProductos{
+            .categoria{
+                font-size: 3vw;
+            }
+            .productosRow{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                .producto{
+                    width:30%;
+                    margin-top: 4%;
+                    .imagenProducto{
+                        width: 95%;
+                        opacity: 1; 
+                    }
+                    .tituloProducto{
+                        font-size: 2vw;
+                    }
+                    .botonComprar{
+                        font-size: 2vw;
+                        width:40%;
+                    }
+                }
+            }
+        }
+    }
+
+    /**CONTACTO**/
+    .mainContacto{
+        grid-area: main;
+        .introduccion{
+            font-size: 2vw;
+        }
+        .contenidoContacto{
+            width: 100%;
+            margin-bottom: 0%;
+            .formulario{
+                width: 100%;
+                form{
+                    input{
+                        font-size: 1.5vw;
+                    }
+                    textarea{
+                            height: 40vh;
+                            font-size: 1.5vw;
+                        }
+                    
+                }
+            }
+        }
+        .redes{
+            width: 100%;
+            padding: 1%;
+            justify-content: space-around;
+            .logosRedes{
+                @include flex-row-center;
+                width: 100%;
+                margin: 4%;
+                .icono{
+                    width: 10vw;
+                    margin: 2em;
+                }
+            }
+            
+        }
+    }
+}

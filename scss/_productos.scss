@@ -1,28 +1,65 @@
 .encabezado{
+    @include cont-txt;
     @include caja;
     font-size: $txt-contenido;
+    text-align: center;
+    .negrita{
+        font-weight: bold;
+    }
 }
 .categoria{
-    font-size: 300%;
+    font-size: $txt-titulo;
     text-align: center;
     color: $azul-oscuro;
 }
 .seccionProductos{
-    @include flex-row-center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include caja;
     justify-content: space-around;
-    .producto{
-        @include caja;
+    .productosRow{
+        @include flex-wrap-between;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 20%;
-        .imagenProducto{
-            width: 95%;
-            border-radius: 2rem;
-        }
-        .tituloProducto{
-            font-size: $txt-contenido
-        }
+        flex-wrap: wrap;
+        justify-content: center;
+        .producto{
+            @include flex-column-center;
+            margin: 1%;
+            opacity: 0.9;
+                &:hover{
+                    opacity: 1;
+                }
+            .imagenProducto{
+                width: 70%;
+                border-radius: 2rem;
+                border: solid 5px $azul-oscuro;
+                margin: 1%;
+                
+            }
+            .tituloProducto{
+                @include cont-txt;
+                font-weight: 600;
+                text-align: center;
+            }
+            .botonComprar{
+                font-family: inherit;
+                font-weight: 600;
+                font-size: 1.5vw;
+                width: 10rem;
+                height: 2.5rem;
+                background-color: $azul-oscuro;
+                color: $amarillo;
+                border: none;
+                border-radius: 2rem;
+                margin: 1%;
+                &:hover{
+                    background-color: $amarillo;
+                    color: $azul-oscuro;
+                    border: solid 1px $azul-oscuro;
+                }
+            }
+        } 
     }
     
 }

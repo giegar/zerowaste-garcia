@@ -6,7 +6,7 @@
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 header .contLogo {
@@ -15,81 +15,115 @@ header .contLogo {
   align-items: center;
 }
 header .contLogo .logo {
-  width: 200px;
+  width: 60%;
 }
 header .menu {
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 header .menu .boton {
-  font-size: 100%;
-  color: #120e0e;
+  font-size: 1.8em;
+  color: #5532a8;
+  font-weight: 505;
   text-decoration: none;
   margin-left: 1rem;
   padding: 0.5rem;
 }
 header .menu .boton:hover {
-  background-color: #5532a8;
-  border-radius: 3rem;
+  background-color: #d8e579;
+  border-radius: 2rem;
 }
 
 footer {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
+  justify-content: space-around;
+  margin-top: 2%;
+  margin-bottom: 5rem;
 }
 footer .menuSecundario .listaSecundaria {
   list-style-type: none;
 }
 footer .menuSecundario .listaSecundaria .boton {
+  font-size: 1.5em;
   font-weight: bold;
   color: #120e0e;
   text-decoration: none;
 }
 footer .menuSecundario .listaSecundaria .boton:hover {
+  color: #88ea98;
   background-color: #5532a8;
   border-radius: 3rem;
 }
+footer aside {
+  width: 45%;
+}
 footer aside .newsletter {
-  font-size: 2.7em;
+  font-size: 3vw;
   color: #5532a8;
+  text-align: center;
+}
+footer aside div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+footer aside div .botonNews {
+  background-color: #5532a8;
+  color: #d8e579;
+  width: 50%;
+}
+footer aside div input, footer aside div .contenidoContacto .formulario form fieldset textarea, .contenidoContacto .formulario form fieldset footer aside div textarea {
+  height: 2rem;
+  width: 100%;
+  background-color: #d8e579;
+  border-radius: 2rem;
+  border: solid #5532a8 2px;
+  text-align: center;
+  font-family: inherit;
+  font-size: 1.5vw;
+  color: #120e0e;
+  font-weight: 600;
+  text-align: justify;
+  text-align: center;
+  margin: 1%;
 }
 
 body {
-  background-color: #88ea98;
+  background-image: url(../media/logos/patron\ eco\ verde.jpg);
   background-attachment: fixed;
   font-family: "Darker Grotesque", sans-serif;
   margin: 0.5em;
 }
 
-/*INDEX*/
-.cajaEslogan {
-  display: flex;
-  align-items: center;
+/* INDEX */
+main {
+  margin: 1em;
 }
-.cajaEslogan .eslogan {
-  font-size: 2.7em;
+main .cajaEslogan {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40em;
+}
+main .cajaEslogan .eslogan {
+  font-size: 8vw;
   color: #5532a8;
-  letter-spacing: 1.5rem;
   line-height: 6.5rem;
   text-align: left;
-  position: relative;
 }
-.cajaEslogan .dibujoPlaneta {
-  width: 30%;
+main .cajaEslogan .dibujoPlaneta {
+  width: 40%;
+  margin: 5%;
 }
-
-main .informacion .apartado .subtitulo {
-  font-size: 2.5em;
-}
-main .informacion .apartado p {
-  font-size: 2em;
-}
-main .apartado {
-  background-color: rgba(216, 229, 121, 0.5);
-  padding: 1.2%;
+main .informacion .apartado {
+  background-color: rgba(216, 229, 121, 0.8);
+  padding: 4%;
   margin-top: 3%;
   margin-bottom: 3%;
   border-radius: 2rem;
@@ -97,46 +131,60 @@ main .apartado {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  padding: 4%;
 }
-
-.eventos {
-  margin-top: 10%;
+main .informacion .apartado .subtitulo {
+  font-size: 3vw;
 }
-.eventos .tituloEventos {
-  font-size: 2.7em;
+main .informacion .apartado p {
+  font-size: 2vw;
+  color: #120e0e;
+  font-weight: 600;
+  text-align: justify;
+}
+main .eventos {
+  margin-top: 6em;
+}
+main .eventos .tituloEventos {
+  font-size: 3vw;
   text-align: center;
   color: #5532a8;
 }
-.eventos .eventosTodos {
+main .eventos .eventosTodos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-content: space-between;
 }
-.eventos .eventosTodos .divEvento {
-  background-color: rgba(216, 229, 121, 0.5);
-  border-radius: 1rem;
+main .eventos .eventosTodos .divEvento {
+  background-color: rgba(216, 229, 121, 0.8);
+  border-radius: 2rem;
   padding: 1%;
   margin-top: 3%;
-  width: 45%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 30%;
 }
-.eventos .eventosTodos .divEvento .imagenEvento {
-  width: 98%;
+main .eventos .eventosTodos .divEvento .imagenEvento {
+  width: 90%;
   border-radius: 1rem;
 }
-.eventos .eventosTodos .divEvento .textoEvento {
-  font-size: 2em;
+main .eventos .eventosTodos .divEvento .textoEvento {
+  font-size: 1.5vw;
+  color: #120e0e;
+  font-weight: 600;
   text-align: justify;
   margin: 2%;
 }
 
 .mainConsejos .introduccion {
-  font-size: 2em;
-  background-color: rgba(216, 229, 121, 0.5);
-  padding: 1.2%;
+  font-size: 2vw;
+  color: #120e0e;
+  font-weight: 600;
+  text-align: justify;
+  background-color: rgba(216, 229, 121, 0.8);
+  padding: 4%;
   margin-top: 3%;
   margin-bottom: 3%;
   border-radius: 2rem;
@@ -144,13 +192,14 @@ main .apartado {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  padding: 4%;
 }
 .mainConsejos .introduccion .txtNegrita {
   font-weight: bold;
 }
 .mainConsejos .apartado {
-  background-color: rgba(216, 229, 121, 0.5);
-  padding: 1.2%;
+  background-color: rgba(216, 229, 121, 0.8);
+  padding: 4%;
   margin-top: 3%;
   margin-bottom: 3%;
   border-radius: 2rem;
@@ -158,19 +207,27 @@ main .apartado {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  padding: 4%;
 }
 .mainConsejos .apartado .subtitulo {
-  font-size: 2.5em;
+  font-size: 3vw;
   color: #5532a8;
 }
 .mainConsejos .apartado .listaConsejos {
-  font-size: 2em;
+  font-size: 2vw;
+  color: #120e0e;
+  font-weight: 600;
+  text-align: justify;
   list-style-type: none;
 }
 
 .mainConsResp .apartado {
-  background-color: rgba(216, 229, 121, 0.5);
-  padding: 1.2%;
+  font-size: 2vw;
+  color: #120e0e;
+  font-weight: 600;
+  text-align: justify;
+  background-color: rgba(216, 229, 121, 0.8);
+  padding: 4%;
   margin-top: 3%;
   margin-bottom: 3%;
   border-radius: 2rem;
@@ -178,29 +235,43 @@ main .apartado {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  font-size: 2em;
+}
+.mainConsResp .apartado .negrita {
+  font-weight: bold;
+}
+.mainConsResp .cajaPreguntas {
+  background-color: rgba(216, 229, 121, 0.8);
+  padding: 4%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border-radius: 2rem;
+  width: auto;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 .mainConsResp .cajaPreguntas .subtitulo {
-  font-size: 2.5em;
+  font-size: 3vw;
   color: #5532a8;
+  text-align: center;
 }
 .mainConsResp .cajaPreguntas .listaPreguntas .pregunta {
-  font-size: 2em;
+  font-size: 2vw;
   font-weight: bold;
   text-align: center;
   letter-spacing: 0.2rem;
   list-style-type: none;
-  background-color: rgba(216, 229, 121, 0.5);
   margin-top: 1%;
   border-radius: 2rem;
 }
-.mainConsResp .cajaPreguntas .listaPreguntas .pregunta:hover {
-  background-color: #d8e579;
-}
 
 .encabezado {
-  background-color: rgba(216, 229, 121, 0.5);
-  padding: 1.2%;
+  font-size: 2vw;
+  color: #120e0e;
+  font-weight: 600;
+  text-align: justify;
+  background-color: rgba(216, 229, 121, 0.8);
+  padding: 4%;
   margin-top: 3%;
   margin-bottom: 3%;
   border-radius: 2rem;
@@ -208,24 +279,25 @@ main .apartado {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  font-size: 2em;
+  font-size: 2vw;
+  text-align: center;
+}
+.encabezado .negrita {
+  font-weight: bold;
 }
 
 .categoria {
-  font-size: 300%;
+  font-size: 3vw;
   text-align: center;
   color: #5532a8;
 }
 
 .seccionProductos {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  justify-content: space-around;
-}
-.seccionProductos .producto {
-  background-color: rgba(216, 229, 121, 0.5);
-  padding: 1.2%;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(216, 229, 121, 0.8);
+  padding: 4%;
   margin-top: 3%;
   margin-bottom: 3%;
   border-radius: 2rem;
@@ -233,23 +305,67 @@ main .apartado {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  justify-content: space-around;
+}
+.seccionProductos .productosRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.seccionProductos .productosRow .producto {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 20%;
+  justify-content: center;
+  margin: 1%;
+  opacity: 0.9;
 }
-.seccionProductos .producto .imagenProducto {
-  width: 95%;
+.seccionProductos .productosRow .producto:hover {
+  opacity: 1;
+}
+.seccionProductos .productosRow .producto .imagenProducto {
+  width: 70%;
   border-radius: 2rem;
+  border: solid 5px #5532a8;
+  margin: 1%;
 }
-.seccionProductos .producto .tituloProducto {
-  font-size: 2em;
+.seccionProductos .productosRow .producto .tituloProducto {
+  font-size: 2vw;
+  color: #120e0e;
+  font-weight: 600;
+  text-align: justify;
+  font-weight: 600;
+  text-align: center;
+}
+.seccionProductos .productosRow .producto .botonComprar {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1.5vw;
+  width: 10rem;
+  height: 2.5rem;
+  background-color: #5532a8;
+  color: #d8e579;
+  border: none;
+  border-radius: 2rem;
+  margin: 1%;
+}
+.seccionProductos .productosRow .producto .botonComprar:hover {
+  background-color: #d8e579;
+  color: #5532a8;
+  border: solid 1px #5532a8;
 }
 
 .introduccion {
-  font-size: 2em;
-  background-color: rgba(216, 229, 121, 0.5);
-  padding: 1.2%;
+  font-size: 2vw;
+  color: #120e0e;
+  font-weight: 600;
+  text-align: justify;
+  background-color: rgba(216, 229, 121, 0.8);
+  padding: 4%;
   margin-top: 3%;
   margin-bottom: 3%;
   border-radius: 2rem;
@@ -257,15 +373,18 @@ main .apartado {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  text-align: center;
 }
 
 .contenidoContacto {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
 }
 .contenidoContacto .formulario {
-  width: 60%;
+  width: 80%;
 }
 .contenidoContacto .formulario form {
   display: flex;
@@ -274,256 +393,1376 @@ main .apartado {
   align-items: center;
 }
 .contenidoContacto .formulario form fieldset {
-  background-color: rgba(216, 229, 121, 0.5);
-  width: 90%;
+  background-color: rgba(216, 229, 121, 0.8);
+  width: 100%;
   border-radius: 2rem;
-  border: solid #5532a8 2px;
+  border: none;
   text-align: center;
 }
 .contenidoContacto .formulario form fieldset input, .contenidoContacto .formulario form fieldset textarea {
-  margin: 3%;
+  margin: 2%;
   width: 90%;
   height: 2rem;
   background-color: #d8e579;
   border-radius: 2rem;
   border: solid #5532a8 2px;
   text-align: center;
-  font-size: 1em;
+  font-family: inherit;
+  font-size: 1.5vw;
+  color: #120e0e;
+  font-weight: 600;
+  text-align: justify;
+  text-align: center;
+}
+.contenidoContacto .formulario form fieldset input:focus, .contenidoContacto .formulario form fieldset textarea:focus {
+  border: solid #5532a8 3px;
+}
+.contenidoContacto .formulario form fieldset textarea {
+  height: 5rem;
 }
 .contenidoContacto .formulario form fieldset .boton {
   background-color: #5532a8;
-  color: rgba(216, 229, 121, 0.5);
+  color: rgba(216, 229, 121, 0.8);
+  height: 2.5rem;
 }
 .contenidoContacto .formulario form fieldset .boton:hover {
-  color: #d8e579;
+  background-color: #d8e579;
+  color: #5532a8;
+  border: solid 1px #5532a8;
 }
-.contenidoContacto .red, .contenidoContacto .red .red--facebook, .contenidoContacto .red .red--instagram, .contenidoContacto .red .red--twitter {
-  font-size: 1rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: black;
-  text-align: center;
-  margin-top: 1%;
-  border-radius: 2rem;
-  width: 30%;
+.contenidoContacto .redes {
+  width: 80%;
+}
+.contenidoContacto .redes .logosRedes {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
 }
-.contenidoContacto .red .red--twitter {
-  background-color: aqua;
+.contenidoContacto .redes .logosRedes .icono {
+  margin: 2rem;
+  width: 7vw;
+  border-radius: 1rem;
 }
-.contenidoContacto .red .red--instagram {
-  background-color: rgb(238, 54, 238);
-}
-.contenidoContacto .red .red--facebook {
-  background-color: rgb(31, 31, 253);
+.contenidoContacto .redes .logosRedes .icono:hover {
+  width: 8.5vw;
 }
 
-/** MEDIAQ INDEX**/
-@media screen and (min-width: 1024px) {
-  .grillaIndex {
+/**
+BREAKPOINTS
+Mobile hasta 576px
+Pantalla chica hasta 769px
+Pantalla mediana hasta 992px
+Pantalla grande hasta 1200px
+Pantalla XL de 1200px en adelante
+**/
+/**************** MOBILE (HASTA 576px) ****************/
+@media screen and (max-width: 576px) {
+  .grilla {
     display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
-    grid-template-rows: 5% 15% auto 10%;
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh auto 100vh;
     grid-row-gap: 1%;
-    grid-template-areas: "header header header" "frase frase frase" "main main main" "footer footer footer";
+    grid-template-areas: "header" "main" "footer";
   }
-  .header {
+  /**HEADER Y FOOTER**/
+  header {
     grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
   }
-  .boton {
-    font-size: 100%;
+  header .contLogo {
+    width: 90%;
+    margin: 5%;
   }
-  .cajaEslogan {
-    grid-area: frase;
+  header .contLogo .logo {
+    width: 100%;
   }
-  .cajaEslogan .eslogan {
-    font-size: 600%;
-    line-height: 110%;
+  header .menuPrincipal {
+    width: 100%;
+    height: 40%;
+    margin: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  .cajaEslogan .dibujoPlaneta {
-    position: absolute;
-    top: 35%;
-    left: 65%;
+  header .menuPrincipal .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 80%;
+    background-color: rgba(216, 229, 121, 0.8);
+    border-radius: 2rem;
   }
-  main {
-    grid-area: main;
-  }
-  main .eventos {
-    grid-area: eventos;
-  }
-  main .eventos .eventosTodos .divEvento .textoEvento {
-    font-size: 2em;
+  header .menuPrincipal .menu .boton {
+    font-size: 7vw;
+    width: 100%;
+    margin-bottom: 2em;
+    padding: 0.1em;
   }
   footer {
     grid-area: footer;
-    justify-content: space-around;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-items: center;
+    margin-bottom: 5%;
   }
   footer .menuSecundario {
-    font-size: 200%;
-    align-content: space-around;
+    margin-bottom: 2rem;
   }
-  footer .newsletter {
-    width: 45%;
-    font-size: 220%;
-    color: #5532a8;
-    text-align: left;
-  }
-}
-@media screen and (max-width: 1023px) {
-  .grillaIndex {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 5% auto auto 10em;
-    grid-row-gap: 2%;
-    grid-template-areas: "header header" "frase frase" "main main" "footer footer";
-    margin: 3%;
-  }
-  header {
-    grid-area: header;
+  footer .menuSecundario .listaSecundaria {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-  }
-  .logo {
-    width: 50%;
-  }
-  .menuPrincipal {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
+    text-align: center;
   }
-  .menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  footer .menuSecundario .listaSecundaria .boton {
+    font-size: 6vw;
   }
-  .boton {
-    font-size: 100%;
-  }
-  .cajaEslogan {
-    grid-area: frase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .dibujoPlaneta {
-    position: absolute;
-    right: 5rem;
-  }
-  main {
-    grid-area: main;
-  }
-  .informacion {
-    text-align: justify;
-    margin: 3%;
-  }
-  .eventosTodos {
+  footer aside {
     width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    justify-content: space-between;
-  }
-  .divEvento {
-    display: flex;
     flex-direction: column;
-    align-self: stretch;
-    justify-self: stretch;
+    align-items: center;
+    justify-content: center;
+    margin: 4%;
   }
-  footer {
-    grid-area: footer;
-    justify-content: space-between;
+  footer aside .newsletter {
+    text-align: center;
+    font-size: 15vw;
+  }
+  footer aside div {
+    width: 100%;
+    margin: 5%;
+  }
+  footer aside div input, footer aside div .contenidoContacto .formulario form fieldset textarea, .contenidoContacto .formulario form fieldset footer aside div textarea {
+    width: 90%;
+    font-size: 4vw;
+    margin: 3%;
+  }
+  footer aside div .botonNews {
+    width: 30%;
+  }
+  /**INDEX**/
+  .mainIndex {
+    grid-area: main;
+    margin: 1%;
+  }
+  .mainIndex .cajaEslogan {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    grid-area: frase;
+    display: flex;
+    flex-direction: column-reverse;
     align-items: center;
   }
-  aside {
-    grid-area: aside;
-    height: 100%;
-    width: 50%;
-    font-size: 2em;
-    color: #5532a8;
+  .mainIndex .cajaEslogan .dibujoPlaneta {
+    width: 45%;
   }
-}
-@media screen and (max-width: 600px) {
-  .grillaIndex {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 15% 10% auto 5% 10%;
-    grid-row-gap: 5px;
-    grid-template-areas: "header header" "frase frase" "main main" "aside aside" "footer footer";
+  .mainIndex .cajaEslogan .eslogan {
+    text-align: center;
+    font-size: 10vw;
+    line-height: normal;
+  }
+  .mainIndex .informacion {
+    width: 100%;
+  }
+  .mainIndex .informacion .apartado .subtitulo {
+    font-size: 7vw;
+    text-align: center;
+  }
+  .mainIndex .informacion .apartado p {
+    font-size: 7vw;
+  }
+  .mainIndex .eventos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5%;
+  }
+  .mainIndex .eventos .tituloEventos {
+    font-size: 8vw;
+  }
+  .mainIndex .eventos .eventosTodos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .mainIndex .eventos .eventosTodos .divEvento {
+    width: auto;
+  }
+  .mainIndex .eventos .eventosTodos .divEvento .imagenEvento {
     margin: 2%;
   }
+  .mainIndex .eventos .eventosTodos .divEvento .textoEvento {
+    font-size: 7vw;
+  }
+  .mainIndex .eventos .eventosTodos .divEvento .textoEvento h3 {
+    text-align: center;
+  }
+  /**CONSEJOS**/
+  .mainConsejos {
+    grid-area: main;
+  }
+  .mainConsejos .introduccion {
+    font-size: 7vw;
+  }
+  .mainConsejos .apartado .subtitulo {
+    font-size: 8vw;
+    text-align: center;
+  }
+  .mainConsejos .apartado .listaConsejos {
+    font-size: 7vw;
+  }
+  /**CONSUMO RESPONSABLE**/
+  .mainConsResp {
+    grid-area: main;
+  }
+  .mainConsResp .apartado h1 {
+    font-size: 8vw;
+    text-align: center;
+  }
+  .mainConsResp .apartado p {
+    font-size: 7vw;
+  }
+  .mainConsResp .cajaPreguntas .subtitulo {
+    font-size: 8vw;
+  }
+  .mainConsResp .cajaPreguntas .listaPreguntas .pregunta {
+    font-size: 7vw;
+    margin-top: 4%;
+  }
+  /**PRODUCTOS**/
+  .mainProductos {
+    grid-area: main;
+  }
+  .mainProductos .encabezado h1 {
+    font-size: 8vw;
+  }
+  .mainProductos .encabezado p {
+    font-size: 7vw;
+  }
+  .mainProductos .seccionProductos .categoria {
+    font-size: 8vw;
+  }
+  .mainProductos .seccionProductos .productosRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .mainProductos .seccionProductos .productosRow .producto {
+    margin-top: 4%;
+  }
+  .mainProductos .seccionProductos .productosRow .producto .imagenProducto {
+    width: 100%;
+    opacity: 1;
+  }
+  .mainProductos .seccionProductos .productosRow .producto .tituloProducto {
+    font-size: 7vw;
+  }
+  .mainProductos .seccionProductos .productosRow .producto .botonComprar {
+    font-size: 5vw;
+  }
+  /**CONTACTO**/
+  .mainContacto {
+    grid-area: main;
+  }
+  .mainContacto .introduccion {
+    font-size: 7vw;
+  }
+  .mainContacto .contenidoContacto {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+  .mainContacto .contenidoContacto .formulario {
+    width: 100%;
+  }
+  .mainContacto .contenidoContacto .formulario form input, .mainContacto .contenidoContacto .formulario form fieldset textarea {
+    font-size: 7vw;
+  }
+  .mainContacto .contenidoContacto .formulario form textarea {
+    height: 40vh;
+    font-size: 7vw;
+  }
+  .mainContacto .redes {
+    width: 100%;
+    padding: 5%;
+  }
+  .mainContacto .redes .logosRedes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    margin: 4%;
+  }
+  .mainContacto .redes .logosRedes .icono {
+    width: 10vh;
+    margin: 1em;
+  }
+}
+/************* PANTALLAS CHICAS (DE 576 A 769)**************/
+@media screen and (min-width: 577px) {
+  .grilla {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh auto 100vh;
+    grid-row-gap: 1%;
+    grid-template-areas: "header" "main" "footer";
+  }
+  /**HEADER Y FOOTER**/
   header {
     grid-area: header;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .logo {
-    height: 45%;
-  }
-  .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1%;
-  }
-  .cajaEslogan {
-    grid-area: frase;
-    display: flex;
     justify-content: center;
-    align-items: center;
-  }
-  .cajaEslogan .dibujoPlaneta {
-    width: 70%;
-  }
-  .cajaEslogan .eslogan {
-    text-align: center;
-  }
-  main {
-    grid-area: main;
-  }
-  .informacion {
-    font-size: 55%;
-    text-align: justify;
-    margin: 3%;
-  }
-  .tituloEventos {
-    font-size: 100%;
-  }
-  .eventosTodos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: space-around;
   }
-  .divEvento {
-    width: 90%;
+  header .contLogo {
+    width: 70%;
+    margin: 5%;
+  }
+  header .contLogo .logo {
+    width: 100%;
+  }
+  header .menuPrincipal {
+    width: 100%;
+    height: 40%;
+    margin: 4%;
     display: flex;
     flex-direction: column;
-    align-self: stretch;
-    justify-self: stretch;
-    margin-left: 15px;
-  }
-  aside {
-    grid-area: aside;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
-  .newsletter {
-    font-size: 80%;
-    text-align: center;
+  header .menuPrincipal .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 80%;
+    background-color: rgba(216, 229, 121, 0.8);
+    border-radius: 2rem;
+  }
+  header .menuPrincipal .menu .boton {
+    font-size: 5vw;
+    width: 100%;
+    margin-bottom: 2em;
+    padding: 0.1em;
   }
   footer {
     grid-area: footer;
+    display: flex;
+    flex-direction: column-reverse;
     justify-items: center;
+    margin-bottom: 5%;
   }
-  .listaSecundaria {
-    font-size: 70%;
+  footer .menuSecundario {
+    margin-bottom: 2rem;
+  }
+  footer .menuSecundario .listaSecundaria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+  }
+  footer .menuSecundario .listaSecundaria .boton {
+    font-size: 5vw;
+  }
+  footer aside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 4%;
+  }
+  footer aside .newsletter {
+    text-align: center;
+    font-size: 8vw;
+  }
+  footer aside div {
+    width: 100%;
+    margin: 5%;
+  }
+  footer aside div input, footer aside div .contenidoContacto .formulario form fieldset textarea, .contenidoContacto .formulario form fieldset footer aside div textarea {
+    width: 90%;
+    font-size: 3vw;
+    margin: 3%;
+  }
+  footer aside div .botonNews {
+    width: 30%;
+  }
+  /**INDEX**/
+  .mainIndex {
+    grid-area: main;
+    margin: 1%;
+  }
+  .mainIndex .cajaEslogan {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    grid-area: frase;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .mainIndex .cajaEslogan .dibujoPlaneta {
+    width: 45%;
+  }
+  .mainIndex .cajaEslogan .eslogan {
+    text-align: center;
+    font-size: 12vw;
+    line-height: normal;
+  }
+  .mainIndex .informacion {
+    width: 100%;
+  }
+  .mainIndex .informacion .apartado .subtitulo {
+    font-size: 5vw;
+    text-align: center;
+  }
+  .mainIndex .informacion .apartado p {
+    font-size: 5vw;
+  }
+  .mainIndex .eventos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5%;
+  }
+  .mainIndex .eventos .tituloEventos {
+    font-size: 7vw;
+  }
+  .mainIndex .eventos .eventosTodos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .mainIndex .eventos .eventosTodos .divEvento {
+    width: auto;
+  }
+  .mainIndex .eventos .eventosTodos .divEvento .imagenEvento {
+    margin: 2%;
+  }
+  .mainIndex .eventos .eventosTodos .divEvento .textoEvento {
+    font-size: 5vw;
+  }
+  .mainIndex .eventos .eventosTodos .divEvento .textoEvento h3 {
+    text-align: center;
+  }
+  /**CONSEJOS**/
+  .mainConsejos {
+    grid-area: main;
+  }
+  .mainConsejos .introduccion {
+    font-size: 5vw;
+  }
+  .mainConsejos .apartado .subtitulo {
+    font-size: 5vw;
+    text-align: center;
+  }
+  .mainConsejos .apartado .listaConsejos {
+    font-size: 5vw;
+  }
+  /**CONSUMO RESPONSABLE**/
+  .mainConsResp {
+    grid-area: main;
+  }
+  .mainConsResp .apartado h1 {
+    font-size: 5vw;
+    text-align: center;
+  }
+  .mainConsResp .apartado p {
+    font-size: 5vw;
+  }
+  .mainConsResp .cajaPreguntas .subtitulo {
+    font-size: 5vw;
+  }
+  .mainConsResp .cajaPreguntas .listaPreguntas .pregunta {
+    font-size: 5vw;
+    margin-top: 4%;
+  }
+  /**PRODUCTOS**/
+  .mainProductos {
+    grid-area: main;
+  }
+  .mainProductos .encabezado h1 {
+    font-size: 5vw;
+  }
+  .mainProductos .encabezado p {
+    font-size: 5vw;
+  }
+  .mainProductos .seccionProductos .categoria {
+    font-size: 5vw;
+  }
+  .mainProductos .seccionProductos .productosRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .mainProductos .seccionProductos .productosRow .producto {
+    margin-top: 4%;
+  }
+  .mainProductos .seccionProductos .productosRow .producto .imagenProducto {
+    width: 90%;
+    opacity: 1;
+  }
+  .mainProductos .seccionProductos .productosRow .producto .tituloProducto {
+    font-size: 5vw;
+  }
+  .mainProductos .seccionProductos .productosRow .producto .botonComprar {
+    font-size: 4vw;
+  }
+  /**CONTACTO**/
+  .mainContacto {
+    grid-area: main;
+  }
+  .mainContacto .introduccion {
+    font-size: 5vw;
+  }
+  .mainContacto .contenidoContacto {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+  .mainContacto .contenidoContacto .formulario {
+    width: 100%;
+  }
+  .mainContacto .contenidoContacto .formulario form input, .mainContacto .contenidoContacto .formulario form fieldset textarea {
+    font-size: 3vw;
+  }
+  .mainContacto .contenidoContacto .formulario form textarea {
+    height: 40vh;
+    font-size: 5vw;
+  }
+  .mainContacto .redes {
+    width: 100%;
+    padding: 5%;
+  }
+  .mainContacto .redes .logosRedes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    margin: 4%;
+  }
+  .mainContacto .redes .logosRedes .icono {
+    width: 10vh;
+    margin: 1em;
+  }
+}
+/******** PANTALLAS MEDIANA (770 A 992) ********/
+@media screen and (min-width: 769px) {
+  .grilla {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50vh auto 100vh;
+    row-gap: 1rem;
+    grid-template-areas: "header" "main" "footer";
+  }
+  /**HEADER Y FOOTER**/
+  header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+  }
+  header .contLogo {
+    width: 30%;
+    margin: 1%;
+  }
+  header .contLogo .logo {
+    width: 100%;
+  }
+  header .menuPrincipal {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  header .menuPrincipal .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(216, 229, 121, 0.8);
+    border-radius: 2rem;
+  }
+  header .menuPrincipal .menu .boton {
+    font-size: 3.5vw;
+    width: 100%;
+    margin-bottom: 4%;
+    padding: 0.1em;
+  }
+  footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-items: center;
+    margin-bottom: 5%;
+  }
+  footer .menuSecundario {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  footer .menuSecundario .listaSecundaria {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    justify-content: space-between;
+  }
+  footer .menuSecundario .listaSecundaria .boton {
+    font-size: 3vw;
+  }
+  footer aside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 4%;
+  }
+  footer aside .newsletter {
+    text-align: center;
+    font-size: 7vw;
+  }
+  footer aside div {
+    width: 100%;
+    margin: 5%;
+  }
+  footer aside div input, footer aside div .contenidoContacto .formulario form fieldset textarea, .contenidoContacto .formulario form fieldset footer aside div textarea {
+    width: 90%;
+    font-size: 3vw;
+    margin: 3%;
+  }
+  footer aside div .botonNews {
+    width: 30%;
+  }
+  /**INDEX**/
+  .mainIndex {
+    grid-area: main;
+    margin: 1%;
+  }
+  .mainIndex .cajaEslogan {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    grid-area: frase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .mainIndex .cajaEslogan .dibujoPlaneta {
+    width: 35%;
+  }
+  .mainIndex .cajaEslogan .eslogan {
+    text-align: left;
+    font-size: 7.5vw;
+    line-height: normal;
+  }
+  .mainIndex .informacion {
+    width: 100%;
+  }
+  .mainIndex .informacion .apartado .subtitulo {
+    font-size: 4vw;
+    text-align: center;
+  }
+  .mainIndex .informacion .apartado p {
+    font-size: 4vw;
+  }
+  .mainIndex .eventos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .mainIndex .eventos .tituloEventos {
+    font-size: 5vw;
+  }
+  .mainIndex .eventos .eventosTodos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .mainIndex .eventos .eventosTodos .divEvento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+  }
+  .mainIndex .eventos .eventosTodos .divEvento .imagenEvento {
+    margin: 2%;
+    width: 70%;
+  }
+  .mainIndex .eventos .eventosTodos .divEvento .textoEvento {
+    font-size: 3vw;
+  }
+  .mainIndex .eventos .eventosTodos .divEvento .textoEvento h3 {
+    text-align: center;
+  }
+  /**CONSEJOS**/
+  .mainConsejos {
+    grid-area: main;
+  }
+  .mainConsejos .introduccion {
+    font-size: 4vw;
+  }
+  .mainConsejos .apartado .subtitulo {
+    font-size: 4vw;
+    text-align: center;
+  }
+  .mainConsejos .apartado .listaConsejos {
+    font-size: 4vw;
+  }
+  /**CONSUMO RESPONSABLE**/
+  .mainConsResp {
+    grid-area: main;
+  }
+  .mainConsResp .apartado h1 {
+    font-size: 4vw;
+    text-align: center;
+  }
+  .mainConsResp .apartado p {
+    font-size: 4vw;
+  }
+  .mainConsResp .cajaPreguntas .subtitulo {
+    font-size: 4vw;
+  }
+  .mainConsResp .cajaPreguntas .listaPreguntas .pregunta {
+    font-size: 4vw;
+    margin-top: 4%;
+  }
+  /**PRODUCTOS**/
+  .mainProductos {
+    grid-area: main;
+  }
+  .mainProductos .encabezado h1 {
+    font-size: 4vw;
+  }
+  .mainProductos .encabezado p {
+    font-size: 4vw;
+  }
+  .mainProductos .seccionProductos .categoria {
+    font-size: 5vw;
+  }
+  .mainProductos .seccionProductos .productosRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .mainProductos .seccionProductos .productosRow .producto {
+    width: 40%;
+    margin-top: 4%;
+  }
+  .mainProductos .seccionProductos .productosRow .producto .imagenProducto {
+    width: 95%;
+    opacity: 1;
+  }
+  .mainProductos .seccionProductos .productosRow .producto .tituloProducto {
+    font-size: 3vw;
+  }
+  .mainProductos .seccionProductos .productosRow .producto .botonComprar {
+    font-size: 3vw;
+    width: 40%;
+  }
+  /**CONTACTO**/
+  .mainContacto {
+    grid-area: main;
+  }
+  .mainContacto .introduccion {
+    font-size: 5vw;
+  }
+  .mainContacto .contenidoContacto {
+    width: 100%;
+    margin-bottom: 0%;
+  }
+  .mainContacto .contenidoContacto .formulario {
+    width: 100%;
+  }
+  .mainContacto .contenidoContacto .formulario form input, .mainContacto .contenidoContacto .formulario form fieldset textarea {
+    font-size: 3vw;
+  }
+  .mainContacto .contenidoContacto .formulario form textarea {
+    height: 40vh;
+    font-size: 5vw;
+  }
+  .mainContacto .redes {
+    width: 100%;
+    padding: 1%;
+  }
+  .mainContacto .redes .logosRedes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    margin: 4%;
+  }
+  .mainContacto .redes .logosRedes .icono {
+    width: 10vh;
+    margin: 1em;
+  }
+}
+/******** PANTALLAS GRANDES (993 A 1200) ********/
+@media screen and (min-width: 993px) {
+  .grilla {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25vh auto 45vh;
+    row-gap: 1rem;
+    grid-template-areas: "header" "main" "footer";
+  }
+  /**HEADER Y FOOTER**/
+  header {
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+  }
+  header .contLogo {
+    width: 25%;
+    margin: 1%;
+  }
+  header .contLogo .logo {
+    width: 100%;
+  }
+  header .menuPrincipal {
+    width: 70%;
+    height: 20%;
+    margin: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  header .menuPrincipal .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(216, 229, 121, 0.8);
+    border-radius: 2rem;
+  }
+  header .menuPrincipal .menu .boton {
+    font-size: 2.5vw;
+    margin-bottom: 4%;
+    padding: 0.1em;
+  }
+  footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 5%;
+  }
+  footer .menuSecundario {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  footer .menuSecundario .listaSecundaria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    text-align: left;
+  }
+  footer .menuSecundario .listaSecundaria .boton {
+    font-size: 3vw;
+  }
+  footer aside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 4%;
+  }
+  footer aside .newsletter {
+    text-align: center;
+    font-size: 5vw;
+  }
+  footer aside div {
+    width: 100%;
+    margin: 5%;
+  }
+  footer aside div input, footer aside div .contenidoContacto .formulario form fieldset textarea, .contenidoContacto .formulario form fieldset footer aside div textarea {
+    width: 90%;
+    font-size: 3vw;
+    margin: 3%;
+  }
+  footer aside div .botonNews {
+    width: 30%;
+    font-size: 2vw;
+  }
+  /**INDEX**/
+  .mainIndex {
+    grid-area: main;
+    margin: 1%;
+  }
+  .mainIndex .cajaEslogan {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    grid-area: frase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .mainIndex .cajaEslogan .dibujoPlaneta {
+    width: 35%;
+  }
+  .mainIndex .cajaEslogan .eslogan {
+    text-align: left;
+    font-size: 7.5vw;
+    line-height: normal;
+  }
+  .mainIndex .informacion {
+    width: 100%;
+  }
+  .mainIndex .informacion .apartado .subtitulo {
+    font-size: 3vw;
+    text-align: center;
+  }
+  .mainIndex .informacion .apartado p {
+    font-size: 3vw;
+  }
+  .mainIndex .eventos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .mainIndex .eventos .tituloEventos {
+    font-size: 4vw;
+  }
+  .mainIndex .eventos .eventosTodos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .mainIndex .eventos .eventosTodos .divEvento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    margin: 1%;
+  }
+  .mainIndex .eventos .eventosTodos .divEvento .imagenEvento {
+    margin: 2%;
+    width: 70%;
+  }
+  .mainIndex .eventos .eventosTodos .divEvento .textoEvento {
+    font-size: 3vw;
+  }
+  .mainIndex .eventos .eventosTodos .divEvento .textoEvento h3 {
+    text-align: center;
+  }
+  /**CONSEJOS**/
+  .mainConsejos {
+    grid-area: main;
+  }
+  .mainConsejos .introduccion {
+    font-size: 3vw;
+  }
+  .mainConsejos .apartado .subtitulo {
+    font-size: 3vw;
+    text-align: center;
+  }
+  .mainConsejos .apartado .listaConsejos {
+    font-size: 3vw;
+  }
+  /**CONSUMO RESPONSABLE**/
+  .mainConsResp {
+    grid-area: main;
+  }
+  .mainConsResp .apartado h1 {
+    font-size: 3vw;
+    text-align: center;
+  }
+  .mainConsResp .apartado p {
+    font-size: 3vw;
+  }
+  .mainConsResp .cajaPreguntas .subtitulo {
+    font-size: 4vw;
+  }
+  .mainConsResp .cajaPreguntas .listaPreguntas .pregunta {
+    font-size: 3vw;
+    margin-top: 4%;
+  }
+  /**PRODUCTOS**/
+  .mainProductos {
+    grid-area: main;
+  }
+  .mainProductos .encabezado h1 {
+    font-size: 4vw;
+  }
+  .mainProductos .encabezado p {
+    font-size: 3vw;
+  }
+  .mainProductos .seccionProductos .categoria {
+    font-size: 4vw;
+  }
+  .mainProductos .seccionProductos .productosRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .mainProductos .seccionProductos .productosRow .producto {
+    width: 40%;
+    margin-top: 4%;
+  }
+  .mainProductos .seccionProductos .productosRow .producto .imagenProducto {
+    width: 95%;
+    opacity: 1;
+  }
+  .mainProductos .seccionProductos .productosRow .producto .tituloProducto {
+    font-size: 3vw;
+  }
+  .mainProductos .seccionProductos .productosRow .producto .botonComprar {
+    font-size: 3vw;
+    width: 40%;
+  }
+  /**CONTACTO**/
+  .mainContacto {
+    grid-area: main;
+  }
+  .mainContacto .introduccion {
+    font-size: 3vw;
+  }
+  .mainContacto .contenidoContacto {
+    width: 100%;
+    margin-bottom: 0%;
+  }
+  .mainContacto .contenidoContacto .formulario {
+    width: 100%;
+  }
+  .mainContacto .contenidoContacto .formulario form input, .mainContacto .contenidoContacto .formulario form fieldset textarea {
+    font-size: 3vw;
+  }
+  .mainContacto .contenidoContacto .formulario form textarea {
+    height: 40vh;
+    font-size: 3vw;
+  }
+  .mainContacto .redes {
+    width: 100%;
+    padding: 1%;
+  }
+  .mainContacto .redes .logosRedes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    margin: 4%;
+  }
+  .mainContacto .redes .logosRedes .icono {
+    width: 10vw;
+    margin: 1em;
+  }
+}
+/******** PANTALLAS XL (SUPERIOR A 1200) ********/
+@media screen and (min-width: 1200px) {
+  .grilla {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25vh auto 45vh;
+    row-gap: 1rem;
+    grid-template-areas: "header" "main" "footer";
+  }
+  /**HEADER Y FOOTER**/
+  header {
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+  }
+  header .contLogo {
+    width: 20%;
+    margin: 1%;
+  }
+  header .contLogo .logo {
+    width: 100%;
+  }
+  header .menuPrincipal {
+    width: 70%;
+    height: 30%;
+    margin: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  header .menuPrincipal .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(216, 229, 121, 0.8);
+    border-radius: 2rem;
+  }
+  header .menuPrincipal .menu .boton {
+    font-size: 2vw;
+    margin-bottom: 4%;
+    padding: 0.2em;
+  }
+  footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 5%;
+  }
+  footer .menuSecundario {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  footer .menuSecundario .listaSecundaria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+  }
+  footer .menuSecundario .listaSecundaria .boton {
+    font-size: 2.5vw;
+    align-self: flex-start;
+  }
+  footer aside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 4%;
+  }
+  footer aside .newsletter {
+    text-align: center;
+    font-size: 4vw;
+  }
+  footer aside div {
+    width: 100%;
+    margin: 5%;
+  }
+  footer aside div input, footer aside div .contenidoContacto .formulario form fieldset textarea, .contenidoContacto .formulario form fieldset footer aside div textarea {
+    width: 90%;
+    font-size: 2vw;
+    margin: 3%;
+  }
+  footer aside div .botonNews {
+    width: 30%;
+    font-size: 1vw;
+  }
+  /**INDEX**/
+  .mainIndex {
+    grid-area: main;
+    margin: 1%;
+  }
+  .mainIndex .cajaEslogan {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    grid-area: frase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .mainIndex .cajaEslogan .dibujoPlaneta {
+    width: 40%;
+  }
+  .mainIndex .cajaEslogan .eslogan {
+    text-align: left;
+    font-size: 7.5vw;
+    line-height: normal;
+  }
+  .mainIndex .informacion {
+    width: 100%;
+  }
+  .mainIndex .informacion .apartado .subtitulo {
+    font-size: 2.5vw;
+    text-align: center;
+  }
+  .mainIndex .informacion .apartado p {
+    font-size: 2.5vw;
+  }
+  .mainIndex .eventos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .mainIndex .eventos .tituloEventos {
+    font-size: 3vw;
+  }
+  .mainIndex .eventos .eventosTodos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .mainIndex .eventos .eventosTodos .divEvento {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 1%;
+  }
+  .mainIndex .eventos .eventosTodos .divEvento .imagenEvento {
+    margin: 2%;
+    width: 50%;
+  }
+  .mainIndex .eventos .eventosTodos .divEvento .textoEvento {
+    font-size: 1.8vw;
+  }
+  .mainIndex .eventos .eventosTodos .divEvento .textoEvento h3 {
+    text-align: center;
+  }
+  /**CONSEJOS**/
+  .mainConsejos {
+    grid-area: main;
+  }
+  .mainConsejos .introduccion {
+    font-size: 2vw;
+  }
+  .mainConsejos .apartado .subtitulo {
+    font-size: 3vw;
+    text-align: center;
+  }
+  .mainConsejos .apartado .listaConsejos {
+    font-size: 2.5vw;
+  }
+  /**CONSUMO RESPONSABLE**/
+  .mainConsResp {
+    grid-area: main;
+  }
+  .mainConsResp .apartado h1 {
+    font-size: 2.5vw;
+    text-align: center;
+  }
+  .mainConsResp .apartado p {
+    font-size: 2vw;
+  }
+  .mainConsResp .cajaPreguntas .subtitulo {
+    font-size: 3vw;
+  }
+  .mainConsResp .cajaPreguntas .listaPreguntas .pregunta {
+    font-size: 2vw;
+    margin-top: 4%;
+  }
+  /**PRODUCTOS**/
+  .mainProductos {
+    grid-area: main;
+  }
+  .mainProductos .encabezado h1 {
+    font-size: 3vw;
+  }
+  .mainProductos .encabezado p {
+    font-size: 2vw;
+  }
+  .mainProductos .seccionProductos .categoria {
+    font-size: 3vw;
+  }
+  .mainProductos .seccionProductos .productosRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .mainProductos .seccionProductos .productosRow .producto {
+    width: 30%;
+    margin-top: 4%;
+  }
+  .mainProductos .seccionProductos .productosRow .producto .imagenProducto {
+    width: 95%;
+    opacity: 1;
+  }
+  .mainProductos .seccionProductos .productosRow .producto .tituloProducto {
+    font-size: 2vw;
+  }
+  .mainProductos .seccionProductos .productosRow .producto .botonComprar {
+    font-size: 2vw;
+    width: 40%;
+  }
+  /**CONTACTO**/
+  .mainContacto {
+    grid-area: main;
+  }
+  .mainContacto .introduccion {
+    font-size: 2vw;
+  }
+  .mainContacto .contenidoContacto {
+    width: 100%;
+    margin-bottom: 0%;
+  }
+  .mainContacto .contenidoContacto .formulario {
+    width: 100%;
+  }
+  .mainContacto .contenidoContacto .formulario form input, .mainContacto .contenidoContacto .formulario form fieldset textarea {
+    font-size: 1.5vw;
+  }
+  .mainContacto .contenidoContacto .formulario form textarea {
+    height: 40vh;
+    font-size: 1.5vw;
+  }
+  .mainContacto .redes {
+    width: 100%;
+    padding: 1%;
+    justify-content: space-around;
+  }
+  .mainContacto .redes .logosRedes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 4%;
+  }
+  .mainContacto .redes .logosRedes .icono {
+    width: 10vw;
+    margin: 2em;
   }
 }/*# sourceMappingURL=estilo.css.map */

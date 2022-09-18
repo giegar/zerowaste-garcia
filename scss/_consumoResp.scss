@@ -1,12 +1,18 @@
 .mainConsResp{
     .apartado{
+        @include cont-txt;
         @include caja;
-        font-size: $txt-contenido;
+        .negrita{
+            font-weight: bold;
+        }
     }
+
     .cajaPreguntas{
+        @include caja;
         .subtitulo{
         font-size: $txt-titulo;
         color: $azul-oscuro;
+        text-align: center;
         }
         .listaPreguntas{
             .pregunta{
@@ -15,12 +21,8 @@
             text-align: center;
             letter-spacing: 0.2rem;
             list-style-type: none;
-            background-color: $amarillo-trnsp;
             margin-top: 1%;
-            border-radius: 2rem;
-            &:hover{
-                background-color: $amarillo;
-            }    
+            border-radius: 2rem;   
             }
             
         }

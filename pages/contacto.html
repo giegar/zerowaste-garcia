@@ -7,32 +7,35 @@
     <meta name="description" content="Somos una ONG fundada con la mision de crear conciencia ambiental. ¡Contactanos!">
     <meta name="keywords"  content="ECOLOGIA, AMBIENTE, RECICLAJE, ZEROWASTE, BASURA, NATURALEZA, ONG, SIN PLASTICO, NATURALEZA, CONSUMO RESPONSABLE">
     
-    <link href="/css/estilo.css" rel="stylesheet">
+    <link href="../css/estilo.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;600;900&display=swap" rel="stylesheet">
-    
-    <link rel="icon" type="image/png" sizes="32x32" href="/media/logos/favicon.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../media/logos/favicon.ico">
     <title>ConcienciaEco- Contacto</title>
 </head>
-<body>
+<body class="grilla">
     <header>
-        <div>
-            <img src="/media/logos/concienciaeco logo.png" class="logo">
+        <div class="contLogo">
+            <img src="../media/logos/concienciaeco logo.png" class="logo animate__animated animate__slideInLeft">
         </div>
         <nav class="menuPrincipal">
             <ul class="menu">
                 <li><a href="/index.html" class="boton">Inicio</a></li>
-                <li class="boton"><a href="./consejos.html" class="boton">Consejos</a></li>
+                <li><a href="./consejos.html" class="boton">Consejos</a></li>
                 <li><a href="./consumo-responsable.html" class="boton">Consumo responsable</a></li>
                 <li><a href="./productos.html" class="boton">Productos</a></li>
                 <li><a href="./contacto.html" class="boton">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <p class="introduccion">No hay nada más importante para nosotros que ayudar a mejorar la comunidad. Por eso, si tenés alguna duda o queres ser parte de nuestras campañas de concientizacion ¡Escribinos!</p>
+    <main class="mainContacto">
+        <p class="introduccion">No hay nada más importante para nosotros que ayudar a la comunidad. Por eso, si tenés alguna duda o queres ser parte de nuestras campañas de concientizacion ¡Escribinos!</p>
         <section class="contenidoContacto">
             <div class="formulario">
                 <form><fieldset>
@@ -46,40 +49,55 @@
                         <input type="email" placeholder="Correo electronico">
                     </div>
                     <div>
-                        <input type="number" placeholder="Telefono">
+                        <input type="tel" placeholder="Telefono">
                     </div>
                     <div >
-                        <textarea placeholder="Dejanos tu mensaje aca"></textarea>
+                        <textarea placeholder="Deja tu mensaje"></textarea>
                     </div>
                     <div>
                         <input class="boton" type="submit" value="Enviar"/>
                     </div>
                 </fieldset></form>
             </div>
-            <div class="red">
-                <h2 class="subtitulo">¡Encontranos tambien en nuestras redes sociales!</h2>
-                <div class="red--twitter"> <a href="https://twitter.com/" target="_blank">Twitter</a> </div>
-                <div class="red--instagram"> <a href="https://www.instagram.com/" target="_blank">Instagram</a> </div>
-                <div class="red--facebook"> <a href="https://es-la.facebook.com/" target="_blank">Facebook</a> </div>
+
+            <div class="redes">
+                <p class="introduccion" data-aos="zoom-in" data-aos-duration="1500">¡Tambien podes seguirnos en nuestras redes!</p>
+                <div class="logosRedes">
+                    <a href="https://www.instagram.com/" target="_blank"><img src="../media/logos/redes/Instagram.jpg" alt="Instagram" class="icono" data-aos="zoom-in" data-aos-duration="1500"></a>
+                    <a href="https://twitter.com/" target="_blank"><img src="../media/logos/redes/twitter.png" alt="Twitter" class="icono" data-aos="zoom-in" data-aos-duration="1500"></a>
+                    <a href="https://es-la.facebook.com/" target="_blank"><img src="../media/logos/redes/facebook.jpg" alt="facebook" class="icono" data-aos="zoom-in" data-aos-duration="1500"></a>
+                </div>
             </div>
         </section>
-        
     </main>
     <footer>
         <div class="menuSecundario">
-            <ul>
-                <li><a href="/index.html">Inicio</a></li>
-                <li><a href="./consejos.html">Consejos</a></li>
-                <li><a href="./consumo-responsable.html">Consumo responsable</a></li>
-                <li><a href="./productos.html">Productos</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
+            <ul class="listaSecundaria">
+                <li class="boton"><a href="../index.html" class="boton">🌎 Inicio</a></li>
+                <li class="boton"><a href="./consejos.html" class="boton">🌎 Consejos</a></li>
+                <li class="boton"><a href="./consumo-responsable.html" class="boton">🌎 Consumo responsable</a></li>
+                <li class="boton"><a href="./productos.html" class="boton">🌎 Productos</a></li>
+                <li class="boton"><a href="./contacto.html" class="boton">🌎 Contacto</a></li>
             </ul>
         </div>
         <aside>
-            <h2>¡Suscribite a nuestro newsletter gratuito!</h2>
-
+            <h2 class="newsletter" data-aos="zoom-in" data-aos-duration="1500">¡Suscribite a nuestro newsletter gratuito!</h2>
+            <div>
+                <input type="email" placeholder="Correo electronico" >
+                <input class="botonNews" type="submit" value="Enviar"/>
+            </div>
         </aside>
-
     </footer>
+
+    <script src="js/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 </html>

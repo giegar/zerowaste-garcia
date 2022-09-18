@@ -1,13 +1,13 @@
 .introduccion{
-    font-size: $txt-contenido;
+    @include cont-txt;
     @include caja;
+    text-align: center
 }
 .contenidoContacto{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    @include flex-column-center;
+    margin-bottom: 5rem;
     .formulario{
-        width: 60%;
+        width: 80%;
         form{
         display: flex;
         flex-direction: column;
@@ -15,57 +15,54 @@
         align-items: center;
             fieldset{
                 background-color: $amarillo-trnsp;
-                width: 90%;
+                width: 100%;
                 border-radius: 2rem;
-                border: solid $azul-oscuro 2px;
+                border: none;
                 text-align: center;
                 input{
-                    margin: 3%;
+                    margin: 2%;
                     width: 90%;
                     height: 2rem;
                     background-color: $amarillo;
                     border-radius: 2rem;
                     border: solid $azul-oscuro 2px;
                     text-align: center;
-                    font-size: 1em;
+                    font-family: inherit;
+                    @include card-txt;
+                    text-align: center;
+                    &:focus{
+                        border: solid $azul-oscuro 3px;
+                    }
                 }
                 textarea{
+                    height: 5rem;
                     @extend input
                 }
                 .boton{
                     background-color: $azul-oscuro;
                     color: $amarillo-trnsp;
+                    height: 2.5rem;
                     &:hover{
-                        color: $amarillo;
+                        background-color: $amarillo;
+                        color: $azul-oscuro;
+                        border: solid 1px $azul-oscuro;
                     }
                 }
             }
         }
     }
-    .red {
-        font-size: 1rem;
-        font-weight: bold;
-        text-decoration: none;
-        color: black;
-        text-align: center;
-        margin-top: 1%;
-        border-radius: 2rem;
-        width: 30%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        .red--twitter {
-            @extend .red;
-            background-color: aqua;
-        }
-        .red--instagram {
-            @extend .red;
-            background-color: rgb(238, 54, 238);
-        }
-        .red--facebook {
-            @extend .red;
-            background-color: rgb(31, 31, 253);
+    .redes{
+        width: 80%;
+        .logosRedes{
+            @include flex-row-center;
+            .icono{
+                margin: 2rem;
+                width: 7vw;
+                border-radius: 1rem;
+                &:hover{
+                    width: 8.5vw;
+                }
+            }
         }
     }
 }

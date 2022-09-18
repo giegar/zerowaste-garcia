@@ -1,65 +1,57 @@
-/*INDEX*/
-.cajaEslogan{
-    display: flex;
-    align-items: center;
-    .eslogan{
-        font-size: $txt-enfatico;
-        color: $azul-oscuro;
-        letter-spacing: 1.5rem;
-        line-height: 6.5rem;
-        text-align: left;    
-        position:relative;
-    }
-    .dibujoPlaneta{
-        width: 30%;
-    }
-}
+/* INDEX */
+
 main{
+    margin: 1em;
+    .cajaEslogan{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 40em;
+        .eslogan{
+            font-size: 8vw;
+            color: $azul-oscuro;
+            line-height: 6.5rem;
+            text-align: left;    
+            
+        }
+        .dibujoPlaneta{
+            width: 40%;
+            margin:5%;
+        }
+    }
     .informacion{
         .apartado{
+            @include caja;
+            padding: 4%;
             .subtitulo{
                 font-size: $txt-titulo;
             }
             p{
-                font-size: $txt-contenido;
+                @include cont-txt;
             }
         }
     }
-    .apartado{
-        @include caja;
-    }
-}
-.eventos{
-    margin-top: 10%;
-    .tituloEventos{
-        font-size: $txt-enfatico;
-        text-align: center;
-        color: $azul-oscuro;
-    }
-    .eventosTodos{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-content: space-between;
-        .divEvento{
-            background-color: $amarillo-trnsp;
-            border-radius: 1rem;
-            padding: 1%;
-            margin-top: 3%;
-            width: 45%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .imagenEvento{
-                width: 98%;
-                border-radius: 1rem;
+    .eventos{
+        margin-top: 6em;
+        .tituloEventos{
+            font-size: $txt-titulo;
+            text-align: center;
+            color: $azul-oscuro;
+        }
+        .eventosTodos{
+            @include flex-wrap-between;
+            .divEvento{
+                @include card;
+                width: 30%;
+                .imagenEvento{
+                    width: 90%;
+                    border-radius: 1rem;
+                }
+                .textoEvento{
+                    @include card-txt;
+                    margin: 2%;
+                }    
             }
-            .textoEvento{
-                font-size: $txt-contenido;
-                text-align: justify;
-                margin: 2%;
-            }    
         }
     }
 }
-

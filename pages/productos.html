@@ -7,79 +7,130 @@
     <meta name="description" content="Somos una ONG fundada con la mision de crear conciencia ambiental. ¡Ayudanos a seguir cambiando el mundo!">
     <meta name="keywords"  content="ECOLOGIA, AMBIENTE, RECICLAJE, ZEROWASTE, BASURA, NATURALEZA, ONG, SIN PLASTICO, NATURALEZA, CONSUMO RESPONSABLE">
     
-    <link href="/css/estilo.css" rel="stylesheet">
+    <link href="../css/estilo.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;600;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <link rel="icon" type="image/png" sizes="32x32" href="/media/logos/favicon.ico">
     <title>ConcienciaEco- Productos</title>
 </head>
-<body>
+<body class="grilla">
     <header>
-        <div>
-            <img src="/media/logos/concienciaeco logo.png" class="logo">
+        <div class="contLogo">
+            <img src="/media/logos/concienciaeco logo.png" class="logo animate__animated animate__slideInLeft">
         </div>
         <nav class="menuPrincipal">
             <ul class="menu">
                 <li><a href="/index.html" class="boton">Inicio</a></li>
-                <li class="boton"><a href="./consejos.html" class="boton">Consejos</a></li>
+                <li><a href="./consejos.html" class="boton">Consejos</a></li>
                 <li><a href="./consumo-responsable.html" class="boton">Consumo responsable</a></li>
                 <li><a href="./productos.html" class="boton">Productos</a></li>
                 <li><a href="./contacto.html" class="boton">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="mainProductos">
         <section class="encabezado">
             <h1>Productos</h1>
-            <p>¡Ayudanos a seguir cambiando el mundo!</p>
+            <p>Con la compra de los siguientes productos, estas colaborando directamente con la financiacion de nuestras campañas de concientizacion en diferente puntos de Argentina</p>
+            <p class="negrita">¡Ayudanos a seguir cambiando el mundo!</p>
         </section>
-        <h3 class="categoria">Higiene personal</h3>
+        
         <section class="seccionProductos">
-            <div class="producto">
-                <img class="imagenProducto" src="/media/productos/dientesbambu.jpg" alt="Cepillo dientes bambu">
-                <h4 class="tituloProducto">Cepillo de dientes de bambu</h4>
-            </div>
-            <div class="producto">
-                <img class="imagenProducto" src="/media/productos/luffa.jpg" alt="">
-                <h4 class="tituloProducto">Esponja vegetal</h4>
-            </div>
-            <div class="producto">
-                <img class="imagenProducto" src="/media/productos/pads.jpg" alt="">
-                <h4 class="tituloProducto">Pads desmaquillantes</h4>
+            <h3 class="categoria" data-aos="zoom-in" data-aos-duration="1500">Higiene personal</h3>
+            <div class="productosRow">
+                <div class="producto" data-aos="zoom-in" data-aos-duration="1500">
+                    <img class="imagenProducto" src="/media/productos/dientesbambu.jpg" alt="Cepillo dientes bambu">
+                    <h4 class="tituloProducto">Cepillo de dientes de bambu</h4>
+                    <input class="botonComprar" type="submit" value="Comprar"/>
+                </div>
+                <div class="producto" data-aos="zoom-in" data-aos-duration="1500">
+                    <img class="imagenProducto" src="/media/productos/luffa.jpg" alt="Esponja luffa">
+                    <h4 class="tituloProducto">Esponja vegetal</h4>
+                    <input class="botonComprar" type="submit" value="Comprar"/>
+                </div>
+                <div class="producto" data-aos="zoom-in" data-aos-duration="1500">
+                    <img class="imagenProducto" src="/media/productos/pads.jpg" alt="Pads desmaquillantes">
+                    <h4 class="tituloProducto">Pads desmaquillantes</h4>
+                    <input class="botonComprar" type="submit" value="Comprar"/>
+                </div>
+                <div class="producto" data-aos="zoom-in" data-aos-duration="1500">
+                    <img class="imagenProducto" src="/media/productos/toallas-tela.jpg" alt="Toallas tela">
+                    <h4 class="tituloProducto">Toallas reutilizables de tela</h4>
+                    <input class="botonComprar" type="submit" value="Comprar"/>
+                </div>
+                <div class="producto" data-aos="zoom-in" data-aos-duration="1500">
+                    <img class="imagenProducto" src="/media/productos/cepillo-madera.jpg" alt="Cepillo madera">
+                    <h4 class="tituloProducto">Cepillo de madera</h4>
+                    <input class="botonComprar" type="submit" value="Comprar"/>
+                </div>
             </div>
         </section>
-        <h3 class="categoria">Bazar</h3>
+        
         <section class="seccionProductos">
-            <div class="producto">
-                <img class="imagenProducto" src="/media/productos/bolsareutilizable.jpg" alt="">
-                <h4 class="tituloProducto">Bolsa reutilizable</h4>
-            </div>
-            <div class="producto">
-                <img class="imagenProducto" src="/media/productos/cubiertosbambu.jpg" alt="">
-                <h4 class="tituloProducto">Set cubiertos de bambu</h4>
-            </div>
-            <div class="producto">
-                <img class="imagenProducto" src="/media/productos/beewrap.jpg" alt="">
-                <h4 class="tituloProducto">Paños de cera de abeja</h4>
+            <h3 class="categoria" data-aos="zoom-in" data-aos-duration="1500">Hogar y bazar</h3>
+            <div class="productosRow">
+                <div class="producto" data-aos="zoom-in" data-aos-duration="1500">
+                    <img class="imagenProducto" src="/media/productos/bolsareutilizable.jpg" alt="Bolsa reutilizable">
+                    <h4 class="tituloProducto">Bolsa reutilizable</h4>
+                    <input class="botonComprar" type="submit" value="Comprar"/>
+                </div>
+                <div class="producto" data-aos="zoom-in" data-aos-duration="1500">
+                    <img class="imagenProducto" src="/media/productos/cubiertosbambu.jpg" alt="Cubiertos bambu">
+                    <h4 class="tituloProducto">Set cubiertos de bambu</h4>
+                    <input class="botonComprar" type="submit" value="Comprar"/>
+                </div>
+                <div class="producto" data-aos="zoom-in" data-aos-duration="1500">
+                    <img class="imagenProducto" src="/media/productos/beewrap.jpg" alt="Beewrap">
+                    <h4 class="tituloProducto">Paños de cera de abeja</h4>
+                    <input class="botonComprar" type="submit" value="Comprar"/>
+                </div>
+                <div class="producto" data-aos="zoom-in" data-aos-duration="1500">
+                    <img class="imagenProducto" src="/media/productos/botella.jpg" alt="Botella reutilizable">
+                    <h4 class="tituloProducto">Botella reutilizable</h4>
+                    <input class="botonComprar" type="submit" value="Comprar"/>
+                </div>
+                <div class="producto" data-aos="zoom-in" data-aos-duration="1500">
+                    <img class="imagenProducto" src="/media/productos/sorbetes.jpg" alt="Sorbetes reutilizables">
+                    <h4 class="tituloProducto">Sorbetes de acero inoxidable</h4>
+                    <input class="botonComprar" type="submit" value="Comprar"/>
+                </div>
             </div>
         </section>
     </main>
     <footer>
         <div class="menuSecundario">
-            <ul>
-                <li><a href="/index.html">Inicio</a></li>
-                <li><a href="./como-empezar.html">Consejos</a></li>
-                <li><a href="./consumo-responsable.html">Consumo responsable</a></li>
-                <li><a href="./productos.html">Productos</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
+            <ul class="listaSecundaria">
+                <li class="boton"><a href="../index.html" class="boton">🌎 Inicio</a></li>
+                <li class="boton"><a href="./consejos.html" class="boton">🌎 Consejos</a></li>
+                <li class="boton"><a href="./consumo-responsable.html" class="boton">🌎 Consumo responsable</a></li>
+                <li class="boton"><a href="./productos.html" class="boton">🌎 Productos</a></li>
+                <li class="boton"><a href="./contacto.html" class="boton">🌎 Contacto</a></li>
             </ul>
         </div>
-        <aside>
-            <h2>¡Suscribite a nuestro newsletter gratuito!</h2>
+        <aside class="newsletter" data-aos="zoom-in" data-aos-duration="1500">
+            <h2 class="newsletter">¡Suscribite a nuestro newsletter gratuito!</h2>
+            <div>
+                <input type="email" placeholder="Correo electronico" >
+                <input class="botonNews" type="submit" value="Enviar"/>
+            </div>
         </aside>
     </footer>
+
+    <script src="js/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 </html>

@@ -14,14 +14,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;600;900&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="icon" type="image/png" sizes="32x32" href="/media/logos/favicon.ico">
     <title>ConcienciaEco- Inicio</title>
 </head>
 
-<body class="grillaIndex">
+<body class="grilla">
     <header>
         <div class="contLogo">
-            <img src="./media/logos/concienciaeco logo.png" class="logo">
+            <img src="./media/logos/concienciaeco logo.png" class="logo animate__animated animate__slideInLeft">
         </div>
         <nav class="menuPrincipal">
             <ul class="menu">
@@ -33,54 +36,72 @@
             </ul>
         </nav>
     </header>
-    <section class="cajaEslogan">
-            <img class="dibujoPlaneta" src="/media/planeta.png">
+    <main class="mainIndex">
+        <section class="cajaEslogan">
+            <img class="dibujoPlaneta" src="./media/planeta.png">
             <h1 class="eslogan">No queremos un medio ambiente, lo queremos completo</h1>    
-    </section>
-    <main>
+        </section>
         <section class="informacion">
-            <div class="apartado">
+            <div class="apartado" data-aos="zoom-in" data-aos-duration="1500">
                 <h2 class="subtitulo">¿Quienes somos?</h2>
                 <p>Somos una organizacion ecologista sin fines de lucro. Nos dedicamos a difundir informacion de forma simple sobre habitos de consumo, reciclaje y concientizacion ambiental en general.</p>
             </div>
-            <div class="apartado">
+            <div class="apartado" data-aos="zoom-in" data-aos-duration="1500">
                 <h2 class="subtitulo">Nuestra mision</h2>
                 <p>Nos parece fundamental difundir la cultura zero waste a la mayor cantidad de personas posibles, en todos los ambitos de la sociedad, siempre centrandonos en reducir al máximo el impacto medioambiental que generamos con el consumo. Queremos que cada vez mas gente experimente la armonia que se obtiene cuando vivimos en sintonia con la naturaleza.</p>
             </div>
-            <div class="apartado">
+            <div class="apartado" data-aos="zoom-in" data-aos-duration="1500">
                 <h2 class="subtitulo">¿Que es la cultura "ZeroWaste"?</h2>
                 <p>ZeroWaste, o basura cero en su traduccion al español, es un estilo de vida que nos invita a evitar la generación de residuos innecesarios. Incorporando algunas prácticas y habitos concientes a nuestra vida cotidiana podemos disminuir no solo la basura de nuestro entorno, sino tambien reducir nuestro impacto en la salud del planeta.</p>
             </div>
         </section>
         <section class="eventos">
-            <h2 class="tituloEventos">Eventos que te pueden interesar</h2>
+            <h2 class="tituloEventos" data-aos="zoom-in" data-aos-duration="1500">Eventos que te pueden interesar</h2>
                 <div class="eventosTodos">
-                    <div  class="divEvento">
-                        <img src="./media/contenido/juliosinplastico.jpg" alt="Julio sin plastico" class="imagenEvento">
+
+                    <div class="divEvento" data-aos="zoom-in" data-aos-duration="1500">
+                        <img src="./media/contenido/incendios forestales.jpg" alt="Incendios forestales en Argentina" class="imagenEvento">
+                        <div class="textoEvento">
+                            <h3>El 95% de los incendios de bosques nativos tienen causa humana</h3>
+                            <p>Los últimos 5 años registraron los picos más altos de incendios forestales en el país. El Servicio Nacional de Manejo del Fuego reconocio que el 95% de los incendios son provocados por la acción humana directa. La mayoria de los focos estan asociados al sector agroganadero, quienes buscan expandir su frontera agropecuaria. </p>
+                        </div>
+                    </div>
+                    <div  class="divEvento" data-aos="zoom-in" data-aos-duration="1500">
+                        <img src="./media/contenido/coldplay sustentable.jpg" alt="Coldplay sustentable" class="imagenEvento">
                             <div class="textoEvento">
-                                <h3>Julio sin plastico</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam vel nihil dicta velit, perferendis odio minus reprehenderit vitae inventore enim aspernatur tenetur ut error labore esse quaerat excepturi corrupti est.</p>
+                                <h3>De que se trata la gira sustentable de Coldplay</h3>
+                                <p>Coldplay anuncio para este 2022 su gira sustentable por Latinoamerica. Las principales propuestas son el uso de energías renovables para el show, comida a base de plantas, merchandising plastic free y agua potable gratuita para botellas reutilizables. Tambien optaron por vuelos comerciales para reducir la huella de carbono y plantar un arbol por cada ticket vendido.
+                                </p>
                             </div>
                     </div>
-                    <div class="divEvento">
+                    <div  class="divEvento" data-aos="zoom-in" data-aos-duration="1500">
+                        <img src="./media/contenido/juliosinplastico.jpg" alt="Julio sin plastico" class="imagenEvento">
+                            <div class="textoEvento">
+                                <h3>¿Que es Julio sin plastico?</h3>
+                                <p>Durante todo el mes de Julio y en todo el mundo se celebra Julio sin Plastico. Esta es una campaña de concientizacion global que nos anima a buscar alternativas a los plasticos de un solo uso, ya que vertimos al oceano 11 millones de toneladas de ellos, según cifras del Programa de la ONU para el Medio Ambiente. Si estas pensando en cambiar tus habitos, te invitamos a leer nuestra seccion de <a href="/pages/consejos.html">Consejos</a>. </p>
+                            </div>
+                    </div>
+                    <div class="divEvento" data-aos="zoom-in" data-aos-duration="1500">
                             <img src="./media/contenido/sobregiroEcologico.jpg" alt="Sobregiro ecologico" class="imagenEvento">
                             <div class="textoEvento">
                                 <h3>Sobregiro ecologico en Argentina</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ea deleniti tenetur quia quidem ipsa velit dolor voluptatibus commodi ex accusamus quo aut veniam temporibus amet facilis cumque, placeat voluptate.</p>
+                                <p>El pasado 24 de junio Argentina entró en sobregiro ecológico. Esto significa que ya consumimos todos los recursos que puede ofrecer la tierra en un año. Actualmente necesitamos 1,7 planetas por año para satisfacer las necesidades de nuestro estilo de vida. El cálculo se realiza obteniendo la huella ecológica de cada país y comparándolo con la biocapacidad de la tierra, es decir, cuántos recursos podemos extraer de ella. Desde el inicio de su medición en 1971, no ha hecho más que adelantarse año a año. </p>
                             </div>
                     </div>
-                    <div class="divEvento">
+                    <div class="divEvento" data-aos="zoom-in" data-aos-duration="1500">
                             <img src="./media/contenido/bioferia.jpg" alt="Bioferia 2022" class="imagenEvento">
                             <div class="textoEvento">
                                 <h3>Bioferia 2022</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti consequatur aperiam, autem quas facere perferendis neque facilis alias est hic eligendi voluptate harum ipsum quasi in ullam totam magnam doloribus.</p>
+                                <p>Entre el 6 y 8 de Mayo se celebra en el Hiodromo de Palermo la tercera edicion de la Bioferia. Se espera unas 30.000 personas que van con el mismo objetivo: vivir más conscientes y consumir de una forma más responsable.
+                                Constará de 3 jornadas de actividades junto a empresas, emprendedores y organizaciones que promueven un estilo de vida sustentable y un desarrollo sostenible. Además, habrá diferentes ofertas gastronómicas junto a Feria Sabe la Tierra, y Feria de Emprendedores de la Red de Economía Circular. 
+                                </p>
                         </div>
                     </div>
-                    <div class="divEvento">
+                    <div class="divEvento" data-aos="zoom-in" data-aos-duration="1500">
                             <img src="./media/contenido/diaTierra.jpg" alt="Dia de la tierra" class="imagenEvento">
                             <div class="textoEvento">
                                 <h3>Dia de la Tierra</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae officia laboriosam fuga commodi odit ex ipsam assumenda eaque quod blanditiis officiis, ipsum praesentium esse architecto? Deserunt, blanditiis nemo. Numquam, repellat!</p>
+                                <p>El sabado 22 de Abril se conmemora internacionalmente el Dia de la Tierra. Segun la ONU, "los ecosistemas sustentan todas las formas de vida de la Tierra. De la salud de nuestros ecosistemas depende directamente la salud de nuestro planeta y sus habitantes. Restaurar aquellos que están dañados ayudará a acabar con la pobreza, a combatir el cambio climático y prevenir una extinción masiva. Pero sólo lo conseguiremos si todo el mundo pone de su parte." Mas informacion <a href="https://www.un.org/es/observances/earth-day" target="_blank">aca</a> </p>
                             </div>
                     </div>
                 </div>
@@ -96,12 +117,24 @@
                 <li class="boton"><a href="./pages/contacto.html" class="boton">🌎 Contacto</a></li>
             </ul>
         </div>
-        <aside class="newsletter">
-            <h2>¡Suscribite a nuestro newsletter gratuito!</h2>
+        <aside class="newsletter" data-aos="zoom-in" data-aos-duration="1500">
+            <h2 class="newsletter">¡Suscribite a nuestro newsletter gratuito!</h2>
+            <div>
+                <input type="email" placeholder="Correo electronico" >
+                <input class="botonNews" type="submit" value="Enviar"/>
+            </div>
         </aside>
-    </footer>    
-    
-    
+    </footer>  
+
+    <script src="js/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 </html>

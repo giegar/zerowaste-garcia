@@ -1,59 +1,86 @@
 header{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     .contLogo{
         display: flex;
         flex-direction: column;
         align-items: center;
         .logo{
-            width: 200px;
+            width: 60%;
         }
     }
     .menu{
         list-style-type: none;
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: space-between;
         .boton{
-            font-size: 100%;
-            color: $negro;
+            font-size: 1.8em;
+            color: $azul-oscuro;
+            font-weight: 505;
             text-decoration: none;
             margin-left: 1rem;
             padding: 0.5rem;
             &:hover{
-                background-color: $azul-oscuro;
-                border-radius: 3rem;
+                background-color: $amarillo;
+                border-radius: 2rem;
             }
         }
     }
 }    
 footer{
-    display: flex;
-    flex-direction: row;
+    @include flex-row-center;
     align-items: center;
+    justify-content: space-around;
+    margin-top: 2%;
+    margin-bottom: 5rem;
     .menuSecundario{
         .listaSecundaria{
             list-style-type: none;    
             .boton{
+                font-size: 1.5em;
                 font-weight: bold;
                 color: $negro;
                 text-decoration: none;
                 &:hover{
+                    color:$verde-claro;
                     background-color: $azul-oscuro;
                     border-radius: 3rem;
-                    
                 }
             }
         }
     } 
     aside{
+        width: 45%;
         .newsletter{
-            font-size: $txt-enfatico;
+            font-size: $txt-titulo;
             color:$azul-oscuro;
+            text-align: center;
         }
-    }   
+        div{
+            @include flex-column-center;
+            .botonNews{
+                background-color: $azul-oscuro;
+                color: $amarillo;
+                width: 50%;
+            }
+            input{
+                height: 2rem;
+                width: 100%;
+                background-color: $amarillo;
+                border-radius: 2rem;
+                border: solid $azul-oscuro 2px;
+                text-align: center;
+                font-family: inherit;
+                @include card-txt;
+                text-align: center;
+                margin: 1%;
+            }
+        }
+    }
 }
+            
 
 
