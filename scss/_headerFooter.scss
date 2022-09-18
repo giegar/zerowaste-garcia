@@ -23,13 +23,10 @@ header{
             text-decoration: none;
             margin-left: 1rem;
             padding: 0.5rem;
-            &:hover{
-                background-color: $amarillo;
-                border-radius: 2rem;
             }
         }
     }
-}    
+    
 footer{
     @include flex-row-center;
     align-items: center;

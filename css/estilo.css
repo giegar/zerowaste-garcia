@@ -31,10 +31,6 @@ header .menu .boton {
   margin-left: 1rem;
   padding: 0.5rem;
 }
-header .menu .boton:hover {
-  background-color: #d8e579;
-  border-radius: 2rem;
-}
 
 footer {
   display: flex;
